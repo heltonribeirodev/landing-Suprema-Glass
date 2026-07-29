@@ -465,6 +465,7 @@ h3 {
 
 .hero-img-wrap {
     position: relative;
+    width: 100%;
 }
 
 .hero-img {
