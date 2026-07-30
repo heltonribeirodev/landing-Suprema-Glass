@@ -1111,6 +1111,168 @@ footer {
     }
 }
 
+/* ─────────────────────────────────────────
+   COBERTURA DE ATENDIMENTO
+───────────────────────────────────────── */
+.cobertura {
+    background: var(--bg);
+    padding: 80px 0;
+}
+
+.cobertura-inner {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 52px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.05);
+}
+
+/* Layout side-by-side: texto | mapa */
+.cobertura-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.cobertura-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Mapa */
+.cobertura-map {
+    height: 480px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+}
+
+.cobertura-map iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Header */
+.cobertura-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.cobertura-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: var(--steel);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--white);
+    margin-top: 4px;
+}
+
+.cobertura-header .section-tag {
+    margin-bottom: 8px;
+}
+
+.cobertura-header h2 {
+    font-size: clamp(20px, 2vw, 28px);
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.cobertura-header p {
+    color: var(--silver);
+    font-size: 14.5px;
+}
+
+/* Grid de cidades */
+.cobertura-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.cobertura-cidade {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--ice-lt);
+    border: 1px solid #C8E8F7;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+    transition: background .2s, border-color .2s;
+}
+
+.cobertura-cidade:hover {
+    background: #d8f0fb;
+    border-color: var(--ice);
+}
+
+.cobertura-cidade i {
+    color: var(--steel);
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Nota de rodapé */
+.cobertura-obs {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--silver);
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    line-height: 1.5;
+}
+
+.cobertura-obs i {
+    color: var(--ice);
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 960px) {
+    .cobertura-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cobertura-map {
+        height: 360px;
+        position: static;
+    }
+
+    .cobertura-inner {
+        padding: 36px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cobertura-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cobertura-inner {
+        padding: 28px 20px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .reveal {
         opacity: 1;
