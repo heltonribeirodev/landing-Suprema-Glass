@@ -52,7 +52,10 @@
     </div>
 
     <!-- HERO -->
-    <section class="hero" id="inicio">
+    <div class="hero-bg-wrap">
+        <div class="hero-card">
+            <div class="hero-blob" id="heroBlob"></div>
+            <section class="hero" id="inicio">
         <div class="hero-left">
             <div class="hero-tag">Instalação e manutenção de vidros</div>
             <h1>Vidro que <span>transforma</span> o seu espaço.</h1>
@@ -93,7 +96,9 @@
                 </div>
             </div>
         </div>
-    </section>
+            </section>
+        </div><!-- /hero-card -->
+    </div><!-- /hero-bg-wrap -->
 
     <!-- SERVIÇOS -->
     <section class="servicos" id="servicos">
@@ -311,44 +316,165 @@
 
     <!-- CTA / CONTATO -->
     <section class="contato" id="contato">
-        <div class="container contato-inner">
-            <div class="contato-text reveal">
+        <!-- Elementos decorativos de fundo -->
+        <div class="contato-bg-circle contato-bg-circle--1"></div>
+        <div class="contato-bg-circle contato-bg-circle--2"></div>
+        <div class="contato-bg-grid"></div>
+
+        <div class="container contato-wrap">
+
+            <!-- Cabeçalho centralizado -->
+            <div class="contato-header reveal">
                 <div class="section-tag light">Contato</div>
-                <h2>Pronto para transformar seu espaço?</h2>
-                <p>Orçamento rápido, visita técnica gratuita. Atendemos toda Curitiba e Região Metropolitana.</p>
+                <h2>Pronto para transformar<br>seu espaço?</h2>
+                <p>Orçamento sem compromisso, visita técnica gratuita.<br>Atendemos toda Curitiba e Região Metropolitana.</p>
             </div>
-            <div class="contato-actions reveal">
+
+            <!-- Cards de diferenciais -->
+            <div class="contato-diferenciais reveal">
+                <div class="contato-dif">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Resposta rápida</span>
+                </div>
+                <div class="contato-dif">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <span>Medição gratuita</span>
+                </div>
+                <div class="contato-dif">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Garantia pós-instalação</span>
+                </div>
+                <div class="contato-dif">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Agendamento flexível</span>
+                </div>
+            </div>
+
+            <!-- Cards de canais -->
+            <div class="contato-cards reveal">
+
+                <!-- WhatsApp — destaque principal -->
                 <a href="https://wa.me/5541984516179?text=Ol%C3%A1!%20Encontrei%20seu%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20os%20servi%C3%A7os%20da%20Suprema%20Glass%20%26%20Facilities"
-                    class="btn-wa-big" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span><small>Entre em contato</small></span>
+                    class="contato-card contato-card--wa" target="_blank">
+                    <div class="contato-card-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="contato-card-body">
+                        <strong>WhatsApp</strong>
+                        <span>(41) 98451-6179</span>
+                        <p>Fale agora e receba seu orçamento</p>
+                    </div>
+                    <div class="contato-card-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
                 </a>
-                <a href="https://www.instagram.com/supremaglasss/" class="btn-ig-big" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                    <span><small>Siga nosso Instagram</small></span>
+
+                <!-- E-mail -->
+                <a href="mailto:supremaglassefacilities@gmail.com" class="contato-card contato-card--email">
+                    <div class="contato-card-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contato-card-body">
+                        <strong>E-mail</strong>
+                        <span>supremaglassefacilities@gmail.com</span>
+                        <p>Envie fotos e detalhes do projeto</p>
+                    </div>
+                    <div class="contato-card-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
                 </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/supremaglasss/" class="contato-card contato-card--ig" target="_blank">
+                    <div class="contato-card-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="contato-card-body">
+                        <strong>Instagram</strong>
+                        <span>@supremaglasss</span>
+                        <p>Veja nossos projetos e nos siga</p>
+                    </div>
+                    <div class="contato-card-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+
             </div>
+
+            <!-- Nota de rodapé da seção -->
+            <p class="contato-nota reveal">
+                <i class="fa-solid fa-location-dot"></i>
+                Curitiba e Região Metropolitana &nbsp;·&nbsp;
+                <i class="fa-solid fa-clock"></i>
+                Atendimento de segunda a sábado
+            </p>
+
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container footer-inner">
+    <footer class="footer">
+        <!-- Topo do footer: logo + colunas -->
+        <div class="container footer-top">
+
+            <!-- Marca -->
             <div class="footer-brand">
-                <img src="assets/img/logo/logo png.png" alt="Suprema Glass">
-                <span>SUPREMA<em>GLASS</em> & FACILITIES</span>
+                <img src="assets/img/logo/logo png.png" alt="Suprema Glass & Facilities">
+                <p class="footer-brand-desc">Instalação e manutenção de vidros em Curitiba e Região Metropolitana. Qualidade suprema em cada detalhe.</p>
+                <!-- Redes sociais -->
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/supremaglasss/" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5541984516179" target="_blank" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:supremaglassefacilities@gmail.com" aria-label="E-mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-            <nav class="footer-nav">
-                <a href="#servicos">Serviços</a>
-                <a href="#trabalhos">Trabalhos</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
-            </nav>
-            <div class="footer-meta">
-                <p class="footer-copy">Atendimento em Curitiba e Região Metropolitana.</p>
-                <p class="footer-copy">© 2025 Suprema Glass & Facilities. Todos os direitos reservados.</p>
-                <p class="footer-dev">Desenvolvido por <a href="https://hrdev.com.br/" target="_blank">HR | DEV</a></p>
+
+            <!-- Coluna: Navegação -->
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Soluções</a></li>
+                    <li><a href="#trabalhos">Trabalhos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
             </div>
+
+            <!-- Coluna: Contato -->
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5541984516179" target="_blank">(41) 98451-6179</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:supremaglassefacilities@gmail.com">supremaglassefacilities<br>@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Curitiba e Região Metropolitana</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Linha divisória -->
+        <div class="footer-divider"></div>
+
+        <!-- Rodapé final -->
+        <div class="container footer-bottom">
+            <p>© 2026 Suprema Glass & Facilities. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://hrdev.com.br/" target="_blank">HR | DEV</a></p>
         </div>
     </footer>
 
