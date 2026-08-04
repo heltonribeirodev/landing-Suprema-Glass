@@ -43,3 +43,39 @@ document.addEventListener('click', (e) => {
     document.body.style.overflow = '';
   }
 });
+// ── PROJECT MODAL ──
+const modal        = document.getElementById('projModal');
+const modalImg     = document.getElementById('modalImg');
+const modalTag     = document.getElementById('modalTag');
+const modalTitle   = document.getElementById('modalTitle');
+const modalDesc    = document.getElementById('modalDesc');
+const modalDetails = document.getElementById('modalDetailsText');
+const modalClose   = document.getElementById('modalClose');
+const backdrop     = modal.querySelector('.proj-modal__backdrop');
+
+function openModal(item) {
+  modalImg.src         = item.dataset.img;
+  modalImg.alt         = item.dataset.title;
+  modalTag.textContent = item.dataset.tag;
+  modalTitle.textContent = item.dataset.title;
+  modalDesc.textContent  = item.dataset.desc;
+  modalDetails.textContent = item.dataset.details;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => openModal(item));
+});
+
+modalClose.addEventListener('click', closeModal);
+backdrop.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+});
