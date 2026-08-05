@@ -189,6 +189,7 @@ h3 {
     height: var(--nav-h);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 40px;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px);
@@ -212,6 +213,7 @@ h3 {
     width: 50px;
     object-fit: contain;
     filter: drop-shadow(0 2px 6px rgba(26, 95, 138, .2));
+    flex-shrink: 0;
 }
 
 .nav-brand-text {
@@ -289,6 +291,7 @@ h3 {
     border: none;
     cursor: pointer;
     padding: 4px;
+    flex-shrink: 0;
 }
 
 .nav-hamburger span {
@@ -369,8 +372,6 @@ h3 {
 /* ─────────────────────────────────────────
    HERO BACKGROUND WRAP
 ───────────────────────────────────────── */
-
-/* Hero ocupa toda a largura — sem card, sem borda */
 .hero-bg-wrap,
 .hero-card {
     position: relative;
@@ -378,7 +379,6 @@ h3 {
     overflow: hidden;
 }
 
-/* Blob estático posicionado à direita */
 .hero-blob {
     position: absolute;
     width: 820px;
@@ -620,7 +620,7 @@ h3 {
     position: relative;
     overflow: hidden;
     border-radius: 16px;
-    cursor: pointer;
+    cursor: zoom-in;
 }
 
 .gallery-item img {
@@ -697,7 +697,7 @@ h3 {
 }
 
 .gallery-item:hover .gallery-overlay-base {
-    transform: translateY(-58px); /* sobe para dar espaço ao painel */
+    transform: translateY(-58px);
 }
 
 .gallery-tag {
@@ -888,7 +888,6 @@ h3 {
     overflow: hidden;
 }
 
-/* Círculos decorativos de fundo */
 .contato-bg-circle {
     position: absolute;
     border-radius: 50%;
@@ -911,7 +910,6 @@ h3 {
     background: radial-gradient(circle, rgba(255,255,255,.07) 0%, transparent 70%);
 }
 
-/* Grade decorativa de fundo */
 .contato-bg-grid {
     position: absolute;
     inset: 0;
@@ -922,7 +920,6 @@ h3 {
     pointer-events: none;
 }
 
-/* Wrapper principal centralizado */
 .contato-wrap {
     position: relative;
     z-index: 1;
@@ -933,7 +930,6 @@ h3 {
     gap: 48px;
 }
 
-/* Cabeçalho */
 .contato-header h2 {
     color: #fff;
     margin-bottom: 16px;
@@ -947,7 +943,6 @@ h3 {
     line-height: 1.7;
 }
 
-/* Diferenciais */
 .contato-diferenciais {
     display: flex;
     gap: 12px;
@@ -980,7 +975,6 @@ h3 {
     color: var(--ice);
 }
 
-/* Cards de canal */
 .contato-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1020,7 +1014,6 @@ h3 {
     opacity: 1;
 }
 
-/* WhatsApp card */
 .contato-card--wa {
     background: rgba(255,255,255,.1);
     border: 1px solid rgba(255,255,255,.2);
@@ -1031,7 +1024,6 @@ h3 {
     background: linear-gradient(135deg, rgba(255,255,255,.1), transparent);
 }
 
-/* E-mail card */
 .contato-card--email {
     background: rgba(255,255,255,.1);
     border: 1px solid rgba(255,255,255,.2);
@@ -1042,7 +1034,6 @@ h3 {
     background: linear-gradient(135deg, rgba(255,255,255,.1), transparent);
 }
 
-/* Instagram card */
 .contato-card--ig {
     background: rgba(255,255,255,.1);
     border: 1px solid rgba(255,255,255,.2);
@@ -1053,7 +1044,6 @@ h3 {
     background: linear-gradient(135deg, rgba(255,255,255,.1), transparent);
 }
 
-/* Ícone do card */
 .contato-card-icon {
     flex-shrink: 0;
     width: 56px;
@@ -1069,7 +1059,6 @@ h3 {
     z-index: 1;
 }
 
-/* Corpo do card */
 .contato-card-body {
     flex: 1;
     position: relative;
@@ -1102,7 +1091,6 @@ h3 {
     margin: 0;
 }
 
-/* Seta do card */
 .contato-card-arrow {
     flex-shrink: 0;
     width: 36px;
@@ -1124,7 +1112,6 @@ h3 {
     transform: translateX(5px);
 }
 
-/* Nota de rodapé da seção */
 .contato-nota {
     display: flex;
     align-items: center;
@@ -1140,7 +1127,6 @@ h3 {
     font-size: 13px;
 }
 
-/* Responsivo */
 @media (max-width: 860px) {
     .contato-cards {
         grid-template-columns: 1fr;
@@ -1163,7 +1149,6 @@ h3 {
     font-size: 14px;
 }
 
-/* Topo */
 .footer-top {
     display: grid;
     grid-template-columns: 1.6fr 1fr 1.2fr;
@@ -1171,7 +1156,6 @@ h3 {
     padding: 72px 0 56px;
 }
 
-/* Marca */
 .footer-brand img {
     height: 52px;
     width: auto;
@@ -1189,7 +1173,6 @@ h3 {
     margin-bottom: 24px;
 }
 
-/* Redes sociais */
 .footer-social {
     display: flex;
     gap: 10px;
@@ -1217,7 +1200,6 @@ h3 {
     transform: translateY(-3px);
 }
 
-/* Colunas */
 .footer-col h4 {
     font-family: 'Syne', sans-serif;
     font-size: 13px;
@@ -1250,7 +1232,6 @@ h3 {
     color: var(--ice-lt);
 }
 
-/* Lista de contato com ícones */
 .footer-contact-list li {
     display: flex;
     gap: 10px;
@@ -1264,14 +1245,12 @@ h3 {
     flex-shrink: 0;
 }
 
-/* Divider */
 .footer-divider {
     border: none;
     border-top: 1px solid rgba(255,255,255,.07);
     margin: 0 24px;
 }
 
-/* Rodapé final */
 .footer-bottom {
     display: flex;
     align-items: center;
@@ -1323,12 +1302,10 @@ h3 {
 }
 
 @keyframes fabPulse {
-
     0%,
     100% {
         box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
     }
-
     50% {
         box-shadow: 0 6px 36px rgba(37, 211, 102, .65);
     }
@@ -1421,15 +1398,20 @@ h3 {
 
     .gallery {
         grid-template-columns: 1fr;
-        padding: 0 20px;
+        padding: 0 24px; /* Atualizado para se alinhar ao container */
     }
 
+    /* Correção Responsiva da Proporção da Galeria */
     .gallery-item.portrait img {
-        height: 380px;
+        height: auto;
+        aspect-ratio: 3 / 4; /* Proporção vertical ideal para mostrar o box inteiro */
+        width: 100%;
     }
 
     .gallery-item.landscape img {
-        height: 280px;
+        height: auto;
+        aspect-ratio: 4 / 3; /* Proporção horizontal para coberturas e fachadas */
+        width: 100%;
     }
 
     .gallery-overlay {
@@ -1466,7 +1448,7 @@ h3 {
     }
 
     .container {
-        padding: 0 20px;
+        padding: 0 24px; /* Atualizado para melhor área de respiro lateral */
     }
 }
 
@@ -1486,7 +1468,6 @@ h3 {
     box-shadow: 0 4px 24px rgba(0,0,0,.05);
 }
 
-/* Layout side-by-side: texto | mapa */
 .cobertura-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1500,7 +1481,6 @@ h3 {
     gap: 0;
 }
 
-/* Mapa */
 .cobertura-map {
     height: 480px;
     border-radius: 14px;
@@ -1516,7 +1496,6 @@ h3 {
     pointer-events: none;
 }
 
-/* Header */
 .cobertura-header {
     display: flex;
     align-items: flex-start;
@@ -1553,7 +1532,6 @@ h3 {
     font-size: 14.5px;
 }
 
-/* Grid de cidades */
 .cobertura-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1586,7 +1564,6 @@ h3 {
     flex-shrink: 0;
 }
 
-/* Nota de rodapé */
 .cobertura-obs {
     display: flex;
     align-items: flex-start;
@@ -1605,7 +1582,6 @@ h3 {
     margin-top: 2px;
 }
 
-/* Responsivo */
 @media (max-width: 960px) {
     .cobertura-layout {
         grid-template-columns: 1fr;
@@ -1847,3 +1823,35 @@ h3 {
         gap: 12px;
     }
 }   
+
+/* ── Responsive fixes ≤ 480px ── */
+@media (max-width: 480px) {
+    .contato-diferenciais {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 0 4px;
+    }
+
+    .contato-dif {
+        justify-content: flex-start;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .contato-nota {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .contato-nota-sep {
+        display: none;
+    }
+
+    .contato-nota-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+    }
+}
