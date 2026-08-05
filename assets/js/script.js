@@ -53,24 +53,50 @@ const modalDetails = document.getElementById('modalDetailsText');
 const modalClose   = document.getElementById('modalClose');
 const backdrop     = modal.querySelector('.proj-modal__backdrop');
 
+// Trava scroll no mobile (touch) enquanto modal está aberto
+let scrollY = 0;
+
+function lockScroll() {
+  scrollY = window.scrollY;
+  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = '100%';
+}
+
+function unlockScroll() {
+  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollY);
+}
+
 function openModal(item) {
-  modalImg.src         = item.dataset.img;
-  modalImg.alt         = item.dataset.title;
-  modalTag.textContent = item.dataset.tag;
-  modalTitle.textContent = item.dataset.title;
-  modalDesc.textContent  = item.dataset.desc;
+  modalImg.src             = item.dataset.img;
+  modalImg.alt             = item.dataset.title;
+  modalTag.textContent     = item.dataset.tag;
+  modalTitle.textContent   = item.dataset.title;
+  modalDesc.textContent    = item.dataset.desc;
   modalDetails.textContent = item.dataset.details;
   modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  lockScroll();
 }
 
 function closeModal() {
   modal.classList.remove('open');
-  document.body.style.overflow = '';
+  unlockScroll();
 }
 
 document.querySelectorAll('.gallery-item').forEach(item => {
   item.addEventListener('click', () => openModal(item));
+  // Acessibilidade: abre modal com Enter ou Espaço (role="button")
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openModal(item);
+    }
+  });
 });
 
 modalClose.addEventListener('click', closeModal);
@@ -78,4 +104,4 @@ backdrop.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-});
+})

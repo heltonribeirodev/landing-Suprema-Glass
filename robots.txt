@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Bloqueia arquivos desnecessários para indexação
+Disallow: /assets/js/
+Disallow: /assets/style/
+
+Sitemap: https://supremaglassgroup.com.br/sitemap.xml
