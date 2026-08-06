@@ -522,16 +522,20 @@ h3 {
     align-items: center;
     gap: 14px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, .12);
-    font-size: 13px;
     font-weight: 500;
     color: var(--ink);
     line-height: 1.4;
-}
 
-.hero-img-badge i {
-    font-size: 22px;
-    color: var(--steel);
-    flex-shrink: 0;
+    & span {
+        font-size: 11px;
+        color: var(--silver);
+    }
+
+    & i {
+        font-size: 22px;
+        color: var(--steel);
+        flex-shrink: 0;
+    }
 }
 
 /* ─────────────────────────────────────────
@@ -665,12 +669,10 @@ h3 {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(8, 18, 30, .85) 0%,
-        rgba(8, 18, 30, .30) 45%,
-        transparent 72%
-    );
+    background: linear-gradient(to top,
+            rgba(8, 18, 30, .85) 0%,
+            rgba(8, 18, 30, .30) 45%,
+            transparent 72%);
     transition: opacity .4s ease;
 }
 
@@ -679,11 +681,9 @@ h3 {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(26, 95, 138, .55) 0%,
-        transparent 60%
-    );
+    background: linear-gradient(to top,
+            rgba(26, 95, 138, .55) 0%,
+            transparent 60%);
     opacity: 0;
     transition: opacity .4s ease;
 }
@@ -745,7 +745,7 @@ h3 {
 
 .gallery-hover-panel p {
     font-size: 12px;
-    color: rgba(255,255,255,.72);
+    color: rgba(255, 255, 255, .72);
     line-height: 1.5;
     flex: 1;
     display: -webkit-box;
@@ -903,7 +903,7 @@ h3 {
     height: 600px;
     top: -200px;
     right: -100px;
-    background: radial-gradient(circle, rgba(91,189,228,.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(91, 189, 228, .15) 0%, transparent 70%);
 }
 
 .contato-bg-circle--2 {
@@ -911,15 +911,15 @@ h3 {
     height: 400px;
     bottom: -150px;
     left: -80px;
-    background: radial-gradient(circle, rgba(255,255,255,.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, .07) 0%, transparent 70%);
 }
 
 .contato-bg-grid {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
 }
@@ -941,7 +941,7 @@ h3 {
 }
 
 .contato-header p {
-    color: rgba(255,255,255,.65);
+    color: rgba(255, 255, 255, .65);
     font-size: 17px;
     font-weight: 300;
     line-height: 1.7;
@@ -958,20 +958,20 @@ h3 {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255,255,255,.1);
-    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .15);
     border-radius: 100px;
     padding: 9px 18px;
     font-size: 13px;
     font-weight: 500;
-    color: rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, .9);
     backdrop-filter: blur(8px);
     transition: background .2s, border-color .2s;
 }
 
 .contato-dif:hover {
-    background: rgba(255,255,255,.18);
-    border-color: rgba(255,255,255,.3);
+    background: rgba(255, 255, 255, .18);
+    border-color: rgba(255, 255, 255, .3);
 }
 
 .contato-dif i {
@@ -1011,7 +1011,7 @@ h3 {
 
 .contato-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 48px rgba(0,0,0,.3);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, .3);
 }
 
 .contato-card:hover::before {
@@ -1019,40 +1019,40 @@ h3 {
 }
 
 .contato-card--wa {
-    background: rgba(255,255,255,.1);
-    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(12px);
 }
 
 .contato-card--wa::before {
-    background: linear-gradient(135deg, rgba(255,255,255,.1), transparent);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), transparent);
 }
 
 .contato-card--email {
-    background: rgba(255,255,255,.1);
-    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(12px);
 }
 
 .contato-card--email::before {
-    background: linear-gradient(135deg, rgba(255,255,255,.1), transparent);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), transparent);
 }
 
 .contato-card--ig {
-    background: rgba(255,255,255,.1);
-    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(12px);
 }
 
 .contato-card--ig::before {
-    background: linear-gradient(135deg, rgba(255,255,255,.1), transparent);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), transparent);
 }
 
 .contato-card-icon {
     flex-shrink: 0;
     width: 56px;
     height: 56px;
-    background: rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .2);
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -1082,14 +1082,14 @@ h3 {
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
     letter-spacing: 0.02em;
     margin-bottom: 6px;
 }
 
 .contato-card-body p {
     font-size: 12.5px;
-    color: rgba(255,255,255,.6);
+    color: rgba(255, 255, 255, .6);
     font-weight: 400;
     line-height: 1.4;
     margin: 0;
@@ -1099,7 +1099,7 @@ h3 {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    background: rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .15);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1112,7 +1112,7 @@ h3 {
 }
 
 .contato-card:hover .contato-card-arrow {
-    background: rgba(255,255,255,.25);
+    background: rgba(255, 255, 255, .25);
     transform: translateX(5px);
 }
 
@@ -1121,7 +1121,7 @@ h3 {
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    color: rgba(255,255,255,.45);
+    color: rgba(255, 255, 255, .45);
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -1149,7 +1149,7 @@ h3 {
 ───────────────────────────────────────── */
 .footer {
     background: #0e1117;
-    color: rgba(255,255,255,.55);
+    color: rgba(255, 255, 255, .55);
     font-size: 14px;
 }
 
@@ -1170,7 +1170,7 @@ h3 {
 .footer-brand-desc {
     font-size: 13.5px;
     line-height: 1.75;
-    color: rgba(255,255,255,.45);
+    color: rgba(255, 255, 255, .45);
     max-width: 300px;
     margin-bottom: 24px;
 }
@@ -1184,12 +1184,12 @@ h3 {
     width: 38px;
     height: 38px;
     border-radius: 10px;
-    background: rgba(255,255,255,.07);
-    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .10);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255,255,255,.6);
+    color: rgba(255, 255, 255, .6);
     font-size: 16px;
     transition: background .2s, color .2s, transform .2s;
     text-decoration: none;
@@ -1208,7 +1208,7 @@ h3 {
     font-weight: 700;
     letter-spacing: .1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, .9);
     margin-bottom: 20px;
 }
 
@@ -1223,7 +1223,7 @@ h3 {
 
 .footer-col ul li a,
 .footer-col ul li span {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     text-decoration: none;
     font-size: 14px;
     transition: color .2s;
@@ -1249,7 +1249,7 @@ h3 {
 
 .footer-divider {
     border: none;
-    border-top: 1px solid rgba(255,255,255,.07);
+    border-top: 1px solid rgba(255, 255, 255, .07);
     margin: 0 48px;
 }
 
@@ -1259,13 +1259,13 @@ h3 {
     justify-content: space-between;
     padding: 20px 48px;
     font-size: 12.5px;
-    color: rgba(255,255,255,.3);
+    color: rgba(255, 255, 255, .3);
     flex-wrap: wrap;
     gap: 8px;
 }
 
 .footer-bottom a {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     text-decoration: none;
     font-weight: 600;
     transition: color .2s;
@@ -1333,10 +1333,12 @@ h3 {
 }
 
 @keyframes fabPulse {
+
     0%,
     100% {
         box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
     }
+
     50% {
         box-shadow: 0 6px 36px rgba(37, 211, 102, .65);
     }
@@ -1445,7 +1447,8 @@ h3 {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center top; /* prioriza a parte superior (teto, perfil) */
+        object-position: center top;
+        /* prioriza a parte superior (teto, perfil) */
     }
 
     .gallery-item.landscape img {
@@ -1465,12 +1468,10 @@ h3 {
 
     /* Gradiente mais denso na base no mobile */
     .gallery-overlay::before {
-        background: linear-gradient(
-            to top,
-            rgba(8, 18, 30, .92) 0%,
-            rgba(8, 18, 30, .20) 50%,
-            transparent 70%
-        );
+        background: linear-gradient(to top,
+                rgba(8, 18, 30, .92) 0%,
+                rgba(8, 18, 30, .20) 50%,
+                transparent 70%);
     }
 
     .gallery-overlay-base {
@@ -1525,7 +1526,8 @@ h3 {
     }
 
     .container {
-        padding: 0 24px; /* Atualizado para melhor área de respiro lateral */
+        padding: 0 24px;
+        /* Atualizado para melhor área de respiro lateral */
     }
 }
 
@@ -1542,7 +1544,7 @@ h3 {
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 52px;
-    box-shadow: 0 4px 24px rgba(0,0,0,.05);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .05);
 }
 
 .cobertura-layout {
@@ -1563,7 +1565,7 @@ h3 {
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
     position: relative;
 }
 
@@ -1571,7 +1573,8 @@ h3 {
     width: 100%;
     height: 100%;
     display: block;
-    pointer-events: none; /* evita pulos no scroll */
+    pointer-events: none;
+    /* evita pulos no scroll */
 }
 
 /* Overlay com botão "Abrir no Maps" */
@@ -1592,7 +1595,7 @@ h3 {
     font-weight: 600;
     padding: 9px 16px;
     border-radius: 100px;
-    box-shadow: 0 2px 12px rgba(0,0,0,.18);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .18);
     text-decoration: none;
     transition: background .2s, color .2s, transform .2s, box-shadow .2s;
 }
@@ -1739,6 +1742,7 @@ h3 {
         transition-duration: 0s !important;
     }
 }
+
 @media (max-width: 540px) {
     .footer-top {
         grid-template-columns: 1fr;
@@ -1752,7 +1756,7 @@ h3 {
 
     .footer-col {
         padding-top: 8px;
-        border-top: 1px solid rgba(255,255,255,.07);
+        border-top: 1px solid rgba(255, 255, 255, .07);
     }
 
     .footer-bottom {
@@ -1804,9 +1808,9 @@ h3 {
     max-width: 960px;
     width: 100%;
     max-height: 90vh;
-    box-shadow: 0 32px 80px rgba(0,0,0,.35);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, .35);
     transform: translateY(24px) scale(.97);
-    transition: transform .35s cubic-bezier(.22,1,.36,1);
+    transition: transform .35s cubic-bezier(.22, 1, .36, 1);
 }
 
 .proj-modal.open .proj-modal__panel {
@@ -1819,37 +1823,51 @@ h3 {
 }
 
 .proj-modal.open .proj-modal__img-wrap {
-    animation: modalImgIn .5s cubic-bezier(.22,1,.36,1) both;
+    animation: modalImgIn .5s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .proj-modal.open .proj-modal__tag {
-    animation: modalFadeUp .45s .15s cubic-bezier(.22,1,.36,1) both;
+    animation: modalFadeUp .45s .15s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .proj-modal.open .proj-modal__title {
-    animation: modalFadeUp .45s .22s cubic-bezier(.22,1,.36,1) both;
+    animation: modalFadeUp .45s .22s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .proj-modal.open .proj-modal__desc {
-    animation: modalFadeUp .45s .30s cubic-bezier(.22,1,.36,1) both;
+    animation: modalFadeUp .45s .30s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .proj-modal.open .proj-modal__details {
-    animation: modalFadeUp .45s .37s cubic-bezier(.22,1,.36,1) both;
+    animation: modalFadeUp .45s .37s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .proj-modal.open .proj-modal__btn {
-    animation: modalFadeUp .45s .44s cubic-bezier(.22,1,.36,1) both;
+    animation: modalFadeUp .45s .44s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 @keyframes modalImgIn {
-    from { opacity: 0; transform: scale(1.04); }
-    to   { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(1.04);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes modalFadeUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .proj-modal__close {
@@ -1861,7 +1879,7 @@ h3 {
     height: 36px;
     border-radius: 50%;
     border: none;
-    background: rgba(0,0,0,.45);
+    background: rgba(0, 0, 0, .45);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -1872,7 +1890,7 @@ h3 {
 }
 
 .proj-modal__close:hover {
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
     transform: scale(1.1);
 }
 
@@ -1980,14 +1998,16 @@ h3 {
 
     .proj-modal__img-wrap {
         max-height: 300px;
-        background: #0a0e14; /* fundo escuro preenche as bordas do contain */
+        background: #0a0e14;
+        /* fundo escuro preenche as bordas do contain */
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .proj-modal__img-wrap img {
-        object-fit: contain; /* mostra a imagem inteira, sem cortar */
+        object-fit: contain;
+        /* mostra a imagem inteira, sem cortar */
         object-position: center;
         max-height: 300px;
         width: 100%;
@@ -1998,7 +2018,7 @@ h3 {
         padding: 28px 24px;
         gap: 12px;
     }
-}   
+}
 
 /* ── Responsive fixes ≤ 480px ── */
 @media (max-width: 480px) {
@@ -2031,6 +2051,7 @@ h3 {
         white-space: nowrap;
     }
 }
+
 /* ─────────────────────────────────────────
    SCROLLBAR ESTILIZADA
 ───────────────────────────────────────── */
