@@ -16,6 +16,19 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 24);
 }, { passive: true });
 
+// ── FABs: aparece só após a primeira tela ──
+const waFab    = document.querySelector('.wa-fab');
+const instaFab = document.querySelector('.insta-fab');
+
+function toggleFabs() {
+  const pastHero = window.scrollY > window.innerHeight * 0.20 ;
+  waFab.classList.toggle('fab-visible', pastHero);
+  instaFab.classList.toggle('fab-visible', pastHero);
+}
+
+window.addEventListener('scroll', toggleFabs, { passive: true });
+toggleFabs(); // estado inicial
+
 // ── HAMBURGER MENU ──
 const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');

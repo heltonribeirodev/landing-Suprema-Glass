@@ -506,9 +506,9 @@ h3 {
     width: 100%;
     height: 640px;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
     border-radius: 28px;
-    box-shadow: 0 24px 64px rgba(26, 95, 138, .18), 0 4px 16px rgba(0, 0, 0, .08);
+    box-shadow: 0 24px 105px rgba(26, 95, 138, .18), 0 4px 24px rgba(0, 0, 0, .08);
 }
 
 .hero-img-badge {
@@ -543,9 +543,35 @@ h3 {
 ───────────────────────────────────────── */
 .servicos {
     padding: 100px 0;
-    background: var(--bg);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+/* foto de fundo com blur */
+.servicos::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    background: url('../img/services/webp/varanda-fechada-cobertura-vidro-jacuzzi.webp') center center / cover no-repeat;
+    filter: blur(8px);
+    transform: scale(1.08);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* overlay claro para manter legibilidade */
+.servicos::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(240, 246, 252, .82);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.servicos .container {
+    position: relative;
+    z-index: 1;
 }
 
 .servicos-grid {
@@ -555,16 +581,20 @@ h3 {
 }
 
 .servico-card {
-    background: var(--white);
-    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .80);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, .90);
     border-radius: var(--radius);
     padding: 36px 28px;
+    transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
 }
 
 .servico-card:hover {
-    border-color: var(--ice);
-    box-shadow: 0 12px 36px rgba(91, 189, 228, .12);
-    transform: translateY(-4px);
+    background: rgba(255, 255, 255, .97);
+    border-color: rgba(91, 189, 228, .45);
+    box-shadow: 0 16px 40px rgba(26, 95, 138, .12), 0 2px 8px rgba(91, 189, 228, .10);
+    transform: translateY(-5px);
 }
 
 .servico-icon {
@@ -1293,16 +1323,24 @@ h3 {
     font-size: 26px;
     color: #fff;
     box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
-    transition: transform .2s, box-shadow .2s;
-    animation: fabPulse 2.5s ease-in-out infinite;
-    opacity: 0.5;
+    opacity: 0;
+    transform: translateY(12px) scale(0.85);
+    pointer-events: none;
+    transition: opacity .4s ease, transform .4s ease, box-shadow .2s;
+    animation: none;
+}
+
+.wa-fab.fab-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    animation: waPulse 2.5s ease-in-out infinite;
 }
 
 .wa-fab:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 32px rgba(37, 211, 102, .5);
     animation: none;
-    opacity: 1;
 }
 
 .insta-fab {
@@ -1319,28 +1357,44 @@ h3 {
     justify-content: center;
     font-size: 26px;
     color: #fff;
-    box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
-    transition: transform .2s, box-shadow .2s;
-    animation: fabPulse 2.5s ease-in-out infinite;
-    opacity: 0.5;
+    box-shadow: 0 6px 24px rgba(188, 24, 136, 0.35);
+    opacity: 0;
+    transform: translateY(12px) scale(0.85);
+    pointer-events: none;
+    transition: opacity .4s ease .08s, transform .4s ease .08s, box-shadow .2s;
+    animation: none;
+}
+
+.insta-fab.fab-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    animation: instaPulse 2.5s ease-in-out infinite;
 }
 
 .insta-fab:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 32px rgba(37, 211, 102, .5);
+    box-shadow: 0 10px 32px rgba(188, 24, 136, 0.5);
     animation: none;
-    opacity: 1;
 }
 
-@keyframes fabPulse {
-
+@keyframes waPulse {
     0%,
     100% {
         box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
     }
-
     50% {
         box-shadow: 0 6px 36px rgba(37, 211, 102, .65);
+    }
+}
+
+@keyframes instaPulse {
+    0%,
+    100% {
+        box-shadow: 0 6px 24px rgba(188, 24, 136, 0.35);
+    }
+    50% {
+        box-shadow: 0 6px 36px rgba(188, 24, 136, 0.55);
     }
 }
 
