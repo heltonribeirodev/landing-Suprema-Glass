@@ -118,3 +118,44 @@ backdrop.addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
 })
+
+
+
+
+// ─── Controle do Consentimento de Cookies ───
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const btnAceitar = document.getElementById("btn-aceitar");
+    const btnRecusar = document.getElementById("btn-recusar");
+
+    // Verifica no armazenamento local se o consentimento já foi dado
+    const consentimentoAtual = localStorage.getItem("sg_cookie_consent");
+
+    if (!consentimentoAtual) {
+        // Se não houver registro, exibe o banner
+        cookieBanner.style.display = "block";
+    } else if (consentimentoAtual === "granted") {
+        // Se já aceitou no passado, atualiza o Google Consent Mode silenciosamente
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+
+    // Ação: Aceitar
+    btnAceitar.addEventListener("click", function() {
+        localStorage.setItem("sg_cookie_consent", "granted");
+        cookieBanner.style.display = "none";
+        
+        // Dispara a atualização para o Google Analytics
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    });
+
+    // Ação: Recusar
+    btnRecusar.addEventListener("click", function() {
+        localStorage.setItem("sg_cookie_consent", "denied");
+        cookieBanner.style.display = "none";
+        // O Consent Mode já iniciou como 'denied', então não é necessário atualizar.
+    });
+});

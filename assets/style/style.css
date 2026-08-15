@@ -2151,3 +2151,76 @@ h3 {
 .proj-modal__info::-webkit-scrollbar-thumb:hover {
     background: var(--silver);
 }
+
+
+
+
+/* ─── Cookie Banner ─── */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 9999; /* Garante que fique acima de tudo */
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.cookie-content p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-cookie {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-cookie--outline {
+    background: transparent;
+    border: 1px solid #666;
+    color: #333;
+}
+
+.btn-cookie--primary {
+    background: #000; /* Ajuste para a cor principal da Suprema Glass */
+    border: 1px solid #000;
+    color: #fff;
+}
+
+.btn-cookie--primary:hover {
+    background: #333;
+}
+
+@media (max-width: 600px) {
+    .cookie-banner {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 8px 8px 0 0;
+    }
+    .cookie-actions {
+        flex-direction: column;
+    }
+    .btn-cookie {
+        width: 100%;
+    }
+}
