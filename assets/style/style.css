@@ -816,7 +816,11 @@ h3 {
 }
 
 .gallery-cta {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
     padding: 12px 0 40px;
 }
 
@@ -1379,20 +1383,24 @@ h3 {
 }
 
 @keyframes waPulse {
+
     0%,
     100% {
         box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
     }
+
     50% {
         box-shadow: 0 6px 36px rgba(37, 211, 102, .65);
     }
 }
 
 @keyframes instaPulse {
+
     0%,
     100% {
         box-shadow: 0 6px 24px rgba(188, 24, 136, 0.35);
     }
+
     50% {
         box-shadow: 0 6px 36px rgba(188, 24, 136, 0.55);
     }
@@ -1443,9 +1451,9 @@ h3 {
         height: 340px;
     }
 
-    .sobre-img-secondary {
+    /* .sobre-img-secondary {
         display: none;
-    }
+    } */
 
     .contato-cards {
         grid-template-columns: 1fr;
@@ -1559,6 +1567,13 @@ h3 {
 
     .sobre-img-stack {
         height: 280px;
+    }
+
+    .sobre-img-secondary {
+        width: 160px;
+        height: 200px;
+        bottom: -24px;
+        right: -24px;
     }
 
     .contato {
@@ -2165,9 +2180,10 @@ h3 {
     margin: 0 auto;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    z-index: 9999; /* Garante que fique acima de tudo */
+    z-index: 9999;
+    /* Garante que fique acima de tudo */
     padding: 20px;
     font-family: 'Inter', sans-serif;
 }
@@ -2201,7 +2217,8 @@ h3 {
 }
 
 .btn-cookie--primary {
-    background: #000; /* Ajuste para a cor principal da Suprema Glass */
+    background: #000;
+    /* Ajuste para a cor principal da Suprema Glass */
     border: 1px solid #000;
     color: #fff;
 }
@@ -2217,9 +2234,11 @@ h3 {
         right: 0;
         border-radius: 8px 8px 0 0;
     }
+
     .cookie-actions {
         flex-direction: column;
     }
+
     .btn-cookie {
         width: 100%;
     }
