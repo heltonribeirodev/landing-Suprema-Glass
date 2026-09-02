@@ -1,0 +1,220 @@
+{
+  "categorias": [
+    {
+      "id": "box",
+      "label": "Box de Banheiro",
+      "icon": "fa-solid fa-shower",
+      "descricao": "Boxes de vidro temperado sob medida com perfis em alumínio anodizado, cromado, dourado ou preto fosco. Do modelo mais clássico ao frameless de alto padrão.",
+      "alt": true,
+      "projetos": [
+        {
+          "id": "box-01",
+          "img": "assets/img/services/webp/Box-moderno-champagne.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box com Perfil Anodizado (Champanhe)",
+          "descricao": "Instalação de box de banheiro com perfil em alumínio anodizado Bronze 1001 (Champanhe), combinando elegância e sofisticação ao ambiente. O vidro temperado de 8mm proporciona segurança, resistência e excelente transparência, enquanto os perfis slim garantem um visual moderno, clean e contemporâneo.",
+          "detalhes": "Vidro temperado 8mm • Perfil alumínio anodizado Bronze 1001 (Champanhe) • Perfis slim • Acabamento de alto padrão",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-02",
+          "img": "assets/img/services/webp/Box-moderno-dourado.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box com Perfil Dourado",
+          "descricao": "Instalação de box de banheiro com perfil em alumínio na cor Gold, trazendo um acabamento sofisticado e elegante ao ambiente. O vidro temperado de 8mm proporciona segurança, resistência e excelente transparência, enquanto os perfis slim garantem um visual moderno, clean e contemporâneo.",
+          "detalhes": "Vidro temperado 8mm • Perfil alumínio Gold • Perfis slim • Acabamento de alto padrão",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-03",
+          "img": "assets/img/services/webp/box-frameless-sem-perfil-banheiro-suite2.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box de Alto Padrão Sob Banheira",
+          "descricao": "Box de Alto Padrão sob Banheira, desenvolvido para quem busca unir funcionalidade, elegância e um toque moderno ao ambiente. Design frameless com vidro temperado de alta transparência.",
+          "detalhes": "Vidro temperado 8mm • Acabamento brilhante • Sistema frameless",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-04",
+          "img": "assets/img/services/webp/box-frameless-sem-perfil-banheiro-suite.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Frameless — Suite Compacta",
+          "descricao": "Box frameless sem perfil lateral para suíte compacta, criando a sensação de amplitude e integrando visualmente o espaço do banheiro. O sistema de pivô oculto garante abertura suave e vedação perfeita.",
+          "detalhes": "Vidro temperado 10mm • Sistema frameless • Pivô oculto • Vedação emborrachada",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-05",
+          "img": "assets/img/services/webp/box-deslizante-frameless-perfil-cromado.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Deslizante Frameless — Perfil Cromado",
+          "descricao": "Box deslizante frameless com perfil cromado brilhante, ideal para banheiros onde o espaço de abertura é limitado. O sistema de rolamento de alta precisão garante deslizamento suave e silencioso.",
+          "detalhes": "Vidro temperado 8mm • Perfil cromado • Sistema deslizante frameless • Rolamento de precisão",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-06",
+          "img": "assets/img/services/webp/box-deslizante-perfil-preto-marmore-cinza.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Deslizante — Perfil Preto e Mármore Cinza",
+          "descricao": "Instalação de box deslizante com perfil em alumínio preto fosco em banheiro com revestimento de mármore cinza, criando um conjunto sofisticado e contemporâneo.",
+          "detalhes": "Vidro temperado 8mm • Perfil alumínio preto fosco • Sistema deslizante • Design contemporâneo",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-07",
+          "img": "assets/img/services/webp/box-deslizante-perfil-preto-banheiro-compacto.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Deslizante — Perfil Preto Banheiro Compacto",
+          "descricao": "Box deslizante com perfil preto fosco para banheiro compacto, maximizando o espaço disponível sem abrir mão do estilo moderno e da funcionalidade.",
+          "detalhes": "Vidro temperado 6mm • Perfil alumínio preto fosco • Sistema deslizante • Solução compacta",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-08",
+          "img": "assets/img/services/webp/box-deslizante-perfil-bronze-marmore-escuro.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Deslizante — Perfil Bronze e Mármore Escuro",
+          "descricao": "Box deslizante com perfil em alumínio bronze combinando com revestimento de mármore escuro, criando uma composição luxuosa e refinada.",
+          "detalhes": "Vidro temperado 8mm • Perfil alumínio bronze • Sistema deslizante • Composição luxuosa",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-09",
+          "img": "assets/img/services/webp/box-pivotante-perfil-preto-banheiro-luxo.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Pivotante — Perfil Preto Banheiro Luxo",
+          "descricao": "Box pivotante com perfil em alumínio preto instalado em banheiro de alto padrão. Abertura ampla e elegante com sistema de pivô de precisão.",
+          "detalhes": "Vidro temperado 10mm • Perfil alumínio preto • Sistema pivotante • Banheiro de alto padrão",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-10",
+          "img": "assets/img/services/webp/box-pivotante-perfil-preto-marmore-marrom.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Pivotante — Perfil Preto e Mármore Marrom",
+          "descricao": "Box pivotante com perfil preto fosco harmonizando com revestimento de mármore marrom, entregando sofisticação e modernidade ao banheiro.",
+          "detalhes": "Vidro temperado 10mm • Perfil alumínio preto fosco • Sistema pivotante • Mármore marrom",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "box-11",
+          "img": "assets/img/services/webp/box-pivotante-frameless-marmore-verde.webp",
+          "tag": "Box • Residencial",
+          "titulo": "Box Pivotante Frameless — Mármore Verde",
+          "descricao": "Box pivotante frameless em destaque com revestimento de mármore verde esmeralda, criando um banheiro contemporâneo e ousado. Sem perfis visíveis para máxima leveza visual.",
+          "detalhes": "Vidro temperado 10mm • Sistema frameless • Pivotante • Sem perfis visíveis",
+          "orientacao": "portrait"
+        }
+      ]
+    },
+    {
+      "id": "cobertura",
+      "label": "Coberturas em Vidro",
+      "icon": "fa-solid fa-house-chimney",
+      "descricao": "Coberturas em vidro temperado e laminado para áreas externas, garagens, jardins e piscinas. Proteção total contra chuva com máxima entrada de luz natural.",
+      "alt": true,
+      "projetos": [
+        {
+          "id": "cob-01",
+          "img": "assets/img/services/webp/cobertura.webp",
+          "tag": "Cobertura • Residencial",
+          "titulo": "Cobertura em Vidro — Área de Lazer",
+          "descricao": "Cobertura em vidro temperado laminado instalada em área de lazer residencial, proporcionando proteção contra chuva e vento sem bloquear a luminosidade natural.",
+          "detalhes": "Vidro laminado 8mm+8mm • Estrutura em alumínio • Proteção UV • Área de lazer",
+          "orientacao": "landscape"
+        },
+        {
+          "id": "cob-02",
+          "img": "assets/img/services/webp/cobertura2.webp",
+          "tag": "Cobertura • Residencial",
+          "titulo": "Cobertura em Vidro — Garagem",
+          "descricao": "Cobertura em vidro para garagem residencial com estrutura metálica, combinando proteção funcional com design moderno que valoriza o imóvel.",
+          "detalhes": "Vidro temperado 10mm • Estrutura metálica • Design moderno • Garagem residencial",
+          "orientacao": "landscape"
+        }
+      ]
+    },
+    {
+      "id": "varanda",
+      "label": "Fechamento de Varandas",
+      "icon": "fa-solid fa-wind",
+      "descricao": "Fechamento de varandas com vidro temperado em sistemas retrátil, fixo ou deslizante. Amplie seu espaço de convivência com proteção e estilo.",
+      "alt": false,
+      "projetos": [
+        {
+          "id": "var-01",
+          "img": "assets/img/services/webp/fechamento-varanda-suprema-glass.webp",
+          "tag": "Varanda • Apartamento",
+          "titulo": "Fechamento de Varanda — Vidro Retrátil",
+          "descricao": "Fechamento completo de varanda de apartamento com vidro temperado em sistema retrátil, permitindo abertura total nos dias quentes e proteção nos dias frios ou chuvosos.",
+          "detalhes": "Vidro temperado 8mm • Sistema retrátil • Acabamento alumínio • Apartamento residencial",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "var-02",
+          "img": "assets/img/services/webp/varanda-fechada-cobertura-vidro-jacuzzi.webp",
+          "tag": "Varanda • Cobertura",
+          "titulo": "Varanda Fechada com Jacuzzi — Cobertura",
+          "descricao": "Projeto especial de fechamento de varanda com jacuzzi em apartamento cobertura. Vidro temperado de alta performance combinado com cobertura em policarbonato para máximo conforto.",
+          "detalhes": "Vidro temperado 10mm • Cobertura policarbonato • Jacuzzi integrada • Apartamento cobertura",
+          "orientacao": "landscape"
+        },
+        {
+          "id": "var-03",
+          "img": "assets/img/services/webp/varanda.webp",
+          "tag": "Varanda • Residencial",
+          "titulo": "Fechamento de Varanda — Residência",
+          "descricao": "Fechamento de varanda residencial com vidro temperado e perfis em alumínio, transformando o espaço em uma área de convivência protegida e confortável.",
+          "detalhes": "Vidro temperado 8mm • Perfis alumínio • Residência • Sistema deslizante",
+          "orientacao": "portrait"
+        }
+      ]
+    },
+    {
+      "id": "espelho",
+      "label": "Espelhos Decorativos",
+      "icon": "fa-solid fa-table-columns",
+      "descricao": "Espelhos decorativos e funcionais para ambientes residenciais e comerciais. Instalação profissional com acabamento perfeito.",
+      "alt": true,
+      "projetos": [
+        {
+          "id": "esp-01",
+          "img": "assets/img/services/webp/espelho.webp",
+          "titulo": "teste",
+          "tag": "Espelho • Residencial",
+          "orientacao": "portrait",
+          "descricao": "Espelho decorativo de grande formato instalado em sala de estar, ampliando visualmente o ambiente e criando um ponto focal elegante na decoração.",
+          "detalhes": "Espelho cristal 4mm • Instalação oculta • Grande formato • Sala de estar"
+        }
+      ]
+    },
+    {
+      "id": "porta",
+      "label": "Portas de Vidro",
+      "icon": "fa-solid fa-door-open",
+      "descricao": "Portas de vidro temperado para ambientes internos e externos. Elegância e funcionalidade com máxima segurança.",
+      "alt": false,
+      "projetos": [
+        {
+          "id": "por-01",
+          "img": "assets/img/services/webp/porta_escura.webp",
+          "tag": "Porta • Residencial",
+          "titulo": "Porta de Vidro Temperado — Perfil Escuro",
+          "descricao": "Porta de vidro temperado com perfil em alumínio escuro (preto fosco), criando uma entrada moderna e sofisticada para o ambiente residencial.",
+          "detalhes": "Vidro temperado 10mm • Perfil alumínio preto fosco • Porta residencial • Design contemporâneo",
+          "orientacao": "portrait"
+        },
+        {
+          "id": "por-02",
+          "img": "assets/img/services/webp/Porta(sobre).webp",
+          "tag": "Porta • Residencial",
+          "titulo": "Porta de Vidro — Acesso Interno",
+          "descricao": "Porta de vidro para acesso interno, integrando ambientes com leveza e modernidade. Sistema de fechamento suave com dobradiças de alta qualidade.",
+          "detalhes": "Vidro temperado 8mm • Dobradiças de precisão • Acesso interno • Fechamento suave",
+          "orientacao": "portrait"
+        }
+      ]
+    }
+  ]
+}

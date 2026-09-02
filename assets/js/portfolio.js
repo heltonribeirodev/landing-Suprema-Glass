@@ -19,7 +19,7 @@ filterBtns.forEach(btn => {
 
     // Força a rolagem para o pixel zero da página
     window.scrollTo({
-      top: 400,
+      top: 300,
       behavior: 'smooth'
     });
   });

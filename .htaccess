@@ -1,0 +1,28 @@
+Options -Indexes
+
+# ── URLs limpas (remove .html) ────────────────────────────────────────
+RewriteEngine On
+
+# Se o arquivo físico existe, serve direto (evita loop)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# /portfolio → /portfolio.html
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redireciona /portfolio.html → /portfolio (remove o .html da URL)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,R=301,L]
+
+# ── Segurança: bloqueia acesso direto ao admin-backend ────────────────
+<Files "admin-backend.php">
+    Order Allow,Deny
+    Deny from all
+    Allow from all
+</Files>
+
+# ── Segurança: bloqueia leitura direta do JSON ────────────────────────
+<Files "portfolio.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
