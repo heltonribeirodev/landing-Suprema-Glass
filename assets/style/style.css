@@ -1832,7 +1832,7 @@ h3 {
         flex-direction: column;
         text-align: center;
         gap: 12px;
-        padding: 24px 0;
+        padding: 24px 10px;
     }
 }
 
@@ -2166,7 +2166,6 @@ h3 {
 .proj-modal__info::-webkit-scrollbar-thumb:hover {
     background: var(--silver);
 }
-
 
 
 

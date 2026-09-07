@@ -1,0 +1,35 @@
+Options -Indexes
+
+# —— Bloqueia acesso direto a arquivos sensíveis ——————————————————————————
+<FilesMatch "^\.env$|^\.env\..*$|\.bak$|\.json$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Libera acesso ao portfolio.json pelo JS (mesmo servidor)
+<Files "portfolio.json">
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+    Allow from localhost
+    # Em produção o JS do browser acessa via HTTP normal — precisa permitir
+    Satisfy Any
+</Files>
+
+# —— URLs limpas (remove .html) ————————————————————————
+RewriteEngine On
+
+# Se o arquivo físico existe, serve direto (evita loop)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# /portfolio -> /portfolio.html
+RewriteRule ^([^.]+)$ $1.html [NC,L]
+
+# Redireciona /index.html -> /
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^ / [R=301,L]
+
+# Redireciona /portfolio.html -> /portfolio (remove o .html da URL)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,R=301,L]

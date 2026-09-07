@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Página inicial -->
   <url>
     <loc>https://supremaglassco.com.br/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://supremaglassco.com.br/assets/img/services/webp/varanda-fechada-cobertura-vidro-jacuzzi.webp</image:loc>
+      <image:title>Fechamento de Varanda com Cobertura em Vidro — Suprema Glass Curitiba</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://supremaglassco.com.br/assets/img/services/webp/Box-moderno-champagne.webp</image:loc>
+      <image:title>Box de Banheiro Moderno Champagne — Suprema Glass Curitiba</image:title>
+    </image:image>
   </url>
+
+  <!-- Portfólio -->
+  <url>
+    <loc>https://supremaglassco.com.br/portfolio.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

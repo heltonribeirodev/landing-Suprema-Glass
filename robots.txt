@@ -1,8 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /assets/img/
+Allow: /assets/data/
 
-Disallow: /assets/js/
-Disallow: /assets/style/
-Disallow: /.git/
+Disallow: /admin.html
+Disallow: /admin-backend.php
+Disallow: /salvar_portfolio.php
+Disallow: /assets/js/admin.js
 
 Sitemap: https://supremaglassco.com.br/sitemap.xml

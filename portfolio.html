@@ -4,21 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ─── SEO Principal ─── -->
     <title>Portfólio — Suprema Glass & Facilities | Projetos Entregues em Curitiba</title>
     <meta name="description" content="Portfólio completo da Suprema Glass: box de banheiro, coberturas em vidro, fechamento de varanda, espelhos decorativos e mais. Veja nossos projetos entregues em Curitiba e região metropolitana.">
     <meta name="keywords" content="portfólio vidros Curitiba, box de banheiro fotos, cobertura em vidro projetos, varanda envidraçada, espelho decorativo Curitiba, Suprema Glass projetos">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Suprema Glass">
     <link rel="canonical" href="https://supremaglassco.com.br/portfolio.html">
-
-    <!-- ─── Otimização de Conexões Externas ─── -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-
-    <!-- ─── Open Graph ─── -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://supremaglassco.com.br/portfolio.html">
     <meta property="og:title" content="Portfólio — Suprema Glass | Projetos em Curitiba">
@@ -26,17 +20,35 @@
     <meta property="og:image" content="https://supremaglassco.com.br/assets/img/services/webp/Box-moderno-champagne.webp">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Suprema Glass">
-
-    <!-- ─── Fontes e Ícones ─── -->
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
-
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/portfolio.css">
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- Geo / localização para buscas regionais -->
+    <meta name="geo.region" content="BR-PR">
+    <meta name="geo.placename" content="Curitiba, Paraná, Brasil">
+    <meta name="geo.position" content="-25.4284;-49.2733">
+    <meta name="ICBM" content="-25.4284, -49.2733">
+    <!-- Schema.org — ImageGallery para o portfólio -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Portfólio Suprema Glass",
+      "description": "Galeria de projetos entregues pela Suprema Glass: box de banheiro, coberturas em vidro, fechamento de varanda e espelhos decorativos em Curitiba.",
+      "url": "https://supremaglassco.com.br/portfolio.html",
+      "author": {
+        "@type": "LocalBusiness",
+        "name": "Suprema Glass",
+        "url": "https://supremaglassco.com.br"
+      }
+    }
+    </script>
 </head>
 
 <body class="portfolio-page">
@@ -72,7 +84,7 @@
             <li><a href="index.html#sobre" class="mm-link">Sobre</a></li>
             <li><a href="index.html#contato" class="mm-link">Contato</a></li>
         </ul>
-        <a href="https://wa.me/5541984516179?text=Ol%C3%A1!%20Encontrei%20seu%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20os%20servi%C3%A7os%20da%20Suprema%20Glass"
+        <a href="https://wa.me/5541984516179?text=Ol%C3%A1!%20Encontrei%20seu%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%Bivas%20sobre%20os%20servi%C3%A7os%20da%20Suprema%20Glass"
             class="mm-cta" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i> Solicitar orçamento
         </a>
@@ -89,517 +101,25 @@
         </div>
     </section>
 
-    <!-- FILTROS / CATEGORIAS NAV -->
+    <!-- FILTROS — gerados dinamicamente pelo portfolio.js -->
     <div class="port-filter-bar">
         <div class="container">
-            <div class="port-filter-scroll">
+            <div class="port-filter-scroll" id="filterContainer">
                 <button class="port-filter-btn active" data-filter="all">
                     <i class="fa-solid fa-grid-2"></i> Todos
                 </button>
-                <button class="port-filter-btn" data-filter="box">
-                    <i class="fa-solid fa-shower"></i> Box de Banheiro
-                </button>
-                <button class="port-filter-btn" data-filter="cobertura">
-                    <i class="fa-solid fa-house-chimney"></i> Coberturas
-                </button>
-                <button class="port-filter-btn" data-filter="varanda">
-                    <i class="fa-solid fa-wind"></i> Varandas
-                </button>
-                <button class="port-filter-btn" data-filter="espelho">
-                    <i class="fa-solid fa-table-columns"></i> Espelhos
-                </button>
-                <button class="port-filter-btn" data-filter="porta">
-                    <i class="fa-solid fa-door-open"></i> Portas
-                </button>
+                <!-- demais botões inseridos pelo JS -->
             </div>
         </div>
     </div>
 
-    <!-- ──────────────── BOX DE BANHEIRO ──────────────── -->
-    <section class="port-section" id="box">
-        <div class="container">
-            <div class="port-section-header reveal">
-                <div class="port-section-label">
-                    <span class="port-section-icon"><i class="fa-solid fa-shower"></i></span>
-                    <div>
-                        <div class="section-tag">Categoria</div>
-                        <h2>Box de Banheiro</h2>
-                    </div>
-                </div>
-                <p>Boxes de vidro temperado sob medida com perfis em alumínio anodizado, cromado, dourado ou preto fosco. Do modelo mais clássico ao frameless de alto padrão.</p>
-            </div>
+    <!-- CONTEÚDO DO PORTFÓLIO — gerado dinamicamente pelo portfolio.js -->
+    <div id="portfolioContent">
+        <div style="text-align:center;padding:80px 20px;color:#888">
+            <i class="fa-solid fa-spinner fa-spin" style="font-size:32px;margin-bottom:16px;display:block"></i>
+            Carregando portfólio...
         </div>
-        <div class="gallery" data-category="box">
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/Box-moderno-champagne.webp"
-                data-tag="Box • Residencial"
-                data-title="Box com Perfil Anodizado (Champanhe)"
-                data-desc="Instalação de box de banheiro com perfil em alumínio anodizado Bronze 1001 (Champanhe), combinando elegância e sofisticação ao ambiente. O vidro temperado de 8mm proporciona segurança, resistência e excelente transparência, enquanto os perfis slim garantem um visual moderno, clean e contemporâneo."
-                data-details="Vidro temperado 8mm • Perfil alumínio anodizado Bronze 1001 (Champanhe) • Perfis slim • Acabamento de alto padrão">
-                <img src="assets/img/services/webp/Box-moderno-champagne.webp" alt="Box de banheiro com perfil anodizado champanhe" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box com Perfil Anodizado (Champanhe)</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil alumínio anodizado Bronze 1001 (Champanhe) • Perfis slim</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/Box-moderno-dourado.webp"
-                data-tag="Box • Residencial"
-                data-title="Box com Perfil Dourado"
-                data-desc="Instalação de box de banheiro com perfil em alumínio na cor Gold, trazendo um acabamento sofisticado e elegante ao ambiente. O vidro temperado de 8mm proporciona segurança, resistência e excelente transparência, enquanto os perfis slim garantem um visual moderno, clean e contemporâneo."
-                data-details="Vidro temperado 8mm • Perfil alumínio Gold • Perfis slim • Acabamento de alto padrão">
-                <img src="assets/img/services/webp/Box-moderno-dourado.webp" alt="Box de banheiro com perfil dourado" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box com Perfil Dourado</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil alumínio Gold • Perfis slim</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-frameless-sem-perfil-banheiro-suite2.webp"
-                data-tag="Box • Residencial"
-                data-title="Box de Alto Padrão Sob Banheira"
-                data-desc="Box de Alto Padrão sob Banheira, desenvolvido para quem busca unir funcionalidade, elegância e um toque moderno ao ambiente. Design frameless com vidro temperado de alta transparência."
-                data-details="Vidro temperado 8mm • Acabamento brilhante • Sistema frameless">
-                <img src="assets/img/services/webp/box-frameless-sem-perfil-banheiro-suite2.webp" alt="Box frameless sob banheira suite" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box de Alto Padrão Sob Banheira</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Acabamento brilhante • Sistema frameless</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-frameless-sem-perfil-banheiro-suite.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Frameless — Suite Compacta"
-                data-desc="Box frameless sem perfil lateral para suíte compacta, criando a sensação de amplitude e integrando visualmente o espaço do banheiro. O sistema de pivô oculto garante abertura suave e vedação perfeita."
-                data-details="Vidro temperado 10mm • Sistema frameless • Pivô oculto • Vedação emborrachada">
-                <img src="assets/img/services/webp/box-frameless-sem-perfil-banheiro-suite.webp" alt="Box frameless suite compacta" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Frameless — Suite Compacta</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 10mm • Sistema frameless • Pivô oculto</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box4.webp"
-                data-tag="Box • Residencial"
-                data-title="Box de Abrir até o Teto"
-                data-desc="Box com abertura total do piso ao teto, maximizando o aproveitamento do espaço e criando uma sensação de amplitude. O sistema de abertura articulada permite ventilação eficiente e facilita a limpeza, com acabamento em perfil slim discreto."
-                data-details="Vidro temperado 8mm • Piso ao teto • Sistema de fechamento automático">
-                <img src="assets/img/services/webp/box4.webp" alt="Box de abrir piso ao teto" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box de Abrir até o Teto</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Piso ao teto • Sistema de fechamento automático</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-deslizante-frameless-perfil-cromado.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Deslizante Frameless — Perfil Cromado"
-                data-desc="Box deslizante com sistema frameless e perfil em alumínio cromado, ideal para banheiros que exigem praticidade e sofisticação. A abertura por deslizamento economiza espaço e facilita o acesso."
-                data-details="Vidro temperado 8mm • Perfil cromado • Sistema deslizante • Trilho embutido">
-                <img src="assets/img/services/webp/box-deslizante-frameless-perfil-cromado.webp" alt="Box deslizante frameless perfil cromado" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Deslizante Frameless — Perfil Cromado</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil cromado • Sistema deslizante</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-deslizante-perfil-bronze-marmore-escuro.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Deslizante — Perfil Bronze com Mármore"
-                data-desc="Box deslizante com perfil em alumínio bronze combinado com revestimento em mármore escuro, criando uma composição de alto luxo e contraste visual marcante. Ideal para banheiros decorados com pedras naturais."
-                data-details="Vidro temperado 8mm • Perfil bronze • Sistema deslizante • Compatível com revestimento em pedra">
-                <img src="assets/img/services/webp/box-deslizante-perfil-bronze-marmore-escuro.webp" alt="Box deslizante perfil bronze mármore escuro" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Deslizante — Perfil Bronze com Mármore</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil bronze • Sistema deslizante</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-deslizante-perfil-preto-banheiro-compacto.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Deslizante — Perfil Preto Banheiro Compacto"
-                data-desc="Solução inteligente para banheiros compactos: box deslizante com perfil preto fosco que não ocupa espaço na abertura. O acabamento preto traz personalidade e modernidade ao ambiente, valorizando qualquer revestimento."
-                data-details="Vidro temperado 8mm • Perfil preto fosco • Sistema deslizante • Solução para espaços reduzidos">
-                <img src="assets/img/services/webp/box-deslizante-perfil-preto-banheiro-compacto.webp" alt="Box deslizante perfil preto banheiro compacto" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Deslizante — Banheiro Compacto</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil preto fosco • Sistema deslizante</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-deslizante-perfil-preto-marmore-cinza.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Deslizante — Perfil Preto com Mármore Cinza"
-                data-desc="Combinação sofisticada de box deslizante com perfil preto e revestimento em mármore cinza. A paleta neutra cria um ambiente sereno e de alto padrão, com acabamentos que transmitem precisão e qualidade."
-                data-details="Vidro temperado 8mm • Perfil preto fosco • Sistema deslizante • Harmonização com mármore cinza">
-                <img src="assets/img/services/webp/box-deslizante-perfil-preto-marmore-cinza.webp" alt="Box deslizante perfil preto mármore cinza" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Deslizante — Perfil Preto com Mármore</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil preto fosco • Sistema deslizante</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-pivotante-frameless-marmore-verde.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Pivotante Frameless — Mármore Verde"
-                data-desc="Box pivotante frameless instalado em banheiro com revestimento em mármore verde, criando uma composição de luxo e ousadia visual. O sistema pivotante frameless mantém o vidro como protagonista, sem interferir na leitura do revestimento."
-                data-details="Vidro temperado 10mm • Sistema pivotante frameless • Dobradiça oculta de aço inox • Sem perfil lateral">
-                <img src="assets/img/services/webp/box-pivotante-frameless-marmore-verde.webp" alt="Box pivotante frameless mármore verde" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Pivotante Frameless — Mármore Verde</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 10mm • Sistema pivotante frameless • Dobradiça inox</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-pivotante-perfil-preto-banheiro-luxo.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Pivotante — Perfil Preto Banheiro de Luxo"
-                data-desc="Box pivotante com perfil preto em banheiro de luxo, entregando sofisticação e contraste dramático contra o revestimento claro. O design de abertura pivotante confere elegância ao gesto cotidiano de entrar e sair do box."
-                data-details="Vidro temperado 8mm • Perfil preto fosco • Sistema pivotante • Acabamento de alto padrão">
-                <img src="assets/img/services/webp/box-pivotante-perfil-preto-banheiro-luxo.webp" alt="Box pivotante perfil preto banheiro luxo" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Pivotante — Perfil Preto Luxo</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil preto fosco • Sistema pivotante</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/box-pivotante-perfil-preto-marmore-marrom.webp"
-                data-tag="Box • Residencial"
-                data-title="Box Pivotante — Mármore Marrom"
-                data-desc="Box pivotante com perfil preto e revestimento em mármore marrom, compondo um ambiente quente e sofisticado. A abertura pivotante garante praticidade no dia a dia com elegância no acabamento."
-                data-details="Vidro temperado 8mm • Perfil preto fosco • Sistema pivotante • Harmonia com mármore marrom">
-                <img src="assets/img/services/webp/box-pivotante-perfil-preto-marmore-marrom.webp" alt="Box pivotante perfil preto mármore marrom" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Box • Residencial</span>
-                        <h4>Box Pivotante — Mármore Marrom</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Perfil preto fosco • Sistema pivotante</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- ──────────────── COBERTURAS ──────────────── -->
-    <section class="port-section port-section--alt" id="cobertura">
-        <div class="container">
-            <div class="port-section-header reveal">
-                <div class="port-section-label">
-                    <span class="port-section-icon"><i class="fa-solid fa-house-chimney"></i></span>
-                    <div>
-                        <div class="section-tag">Categoria</div>
-                        <h2>Coberturas em Vidro</h2>
-                    </div>
-                </div>
-                <p>Telhados e pergolados em vidro temperado ou policarbonato para varandas, áreas gourmet e jardins de inverno. Proteção com luminosidade total e estrutura de alta durabilidade.</p>
-            </div>
-        </div>
-        <div class="gallery" data-category="cobertura">
-            <article class="gallery-item landscape reveal"
-                data-img="assets/img/services/webp/cobertura.webp"
-                data-tag="Cobertura • Residencial"
-                data-title="Cobertura Total em Vidro Temperado"
-                data-desc="Cobertura em vidro temperado instalada sobre área externa, proporcionando proteção total contra chuva sem bloquear a luminosidade natural. A estrutura em alumínio com pintura eletroestática garante durabilidade e resistência, ideal para áreas de lazer e gourmet."
-                data-details="Vidro temperado com película de segurança • Estrutura em alumínio • Calha oculta">
-                <img src="assets/img/services/webp/cobertura.webp" alt="Cobertura em vidro com estrutura em alumínio" width="800" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Cobertura • Residencial</span>
-                        <h4>Cobertura Total em Vidro Temperado</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado com película de segurança • Estrutura em alumínio • Calha oculta.</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item landscape reveal"
-                data-img="assets/img/services/webp/cobertura2.webp"
-                data-tag="Cobertura • Residencial"
-                data-title="Cobertura em Policarbonato"
-                data-desc="Cobertura em policarbonato alveolar com estrutura metálica, oferecendo excelente proteção UV e isolamento térmico. Ideal para garagens, áreas de serviço e corredores externos, com custo-benefício superior e instalação rápida."
-                data-details="Policarbonato alveolar 6mm • Estrutura metálica • Proteção UV total">
-                <img src="assets/img/services/webp/cobertura2.webp" alt="Cobertura em policarbonato com estrutura metálica" width="800" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Cobertura • Residencial</span>
-                        <h4>Cobertura em Policarbonato</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Policarbonato alveolar 6mm • Estrutura metálica • Proteção UV total.</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- ──────────────── VARANDAS ──────────────── -->
-    <section class="port-section" id="varanda">
-        <div class="container">
-            <div class="port-section-header reveal">
-                <div class="port-section-label">
-                    <span class="port-section-icon"><i class="fa-solid fa-wind"></i></span>
-                    <div>
-                        <div class="section-tag">Categoria</div>
-                        <h2>Fechamento de Varanda</h2>
-                    </div>
-                </div>
-                <p>Varandas envidraçadas com sistemas de folhas deslizantes ou removíveis. Amplie o espaço útil sem abrir mão da vista e da ventilação natural.</p>
-            </div>
-        </div>
-        <div class="gallery" data-category="varanda">
-            <article class="gallery-item landscape reveal"
-                data-img="assets/img/services/webp/varanda.webp"
-                data-tag="Varanda • Residencial"
-                data-title="Fechamento de Varanda Alto Padrão"
-                data-desc="Fechamento de varanda com vidro temperado de 10mm em sistema de correr, permitindo abertura total ou fechamento completo conforme o clima. O projeto valoriza a vista e integra o ambiente interno ao externo com elegância e funcionalidade."
-                data-details="Vidro temperado 8mm • Sistema de correr">
-                <img src="assets/img/services/webp/varanda.webp" alt="Fechamento de varanda com visão da cidade" width="800" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Varanda • Residencial</span>
-                        <h4>Fechamento de Varanda Alto Padrão</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Sistema de correr.</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item landscape reveal"
-                data-img="assets/img/services/webp/fechamento-varanda-suprema-glass.webp"
-                data-tag="Varanda • Residencial"
-                data-title="Varanda Envidraçada — Sistema Modular"
-                data-desc="Fechamento de varanda com sistema modular de vidros deslizantes sobrepostos, permitindo abertura parcial ou total sem necessidade de espaço adicional. Solução versátil e elegante para apartamentos e casas."
-                data-details="Vidro temperado 8mm • Sistema modular deslizante • Trilho em alumínio • Perfil slim">
-                <img src="assets/img/services/webp/fechamento-varanda-suprema-glass.webp" alt="Varanda envidraçada sistema modular" width="800" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Varanda • Residencial</span>
-                        <h4>Varanda Envidraçada — Sistema Modular</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Sistema modular deslizante • Trilho em alumínio</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item landscape reveal"
-                data-img="assets/img/services/webp/varanda-fechada-cobertura-vidro-jacuzzi.webp"
-                data-tag="Varanda • Residencial"
-                data-title="Varanda com Cobertura e Jacuzzi"
-                data-desc="Projeto completo de fechamento de varanda combinado com cobertura em vidro temperado, integrando área de jacuzzi ao espaço externo. A combinação de fechamento lateral e cobertura garante conforto em qualquer estação do ano."
-                data-details="Vidro temperado 10mm • Fechamento lateral + cobertura • Calha integrada • Estrutura em alumínio">
-                <img src="assets/img/services/webp/varanda-fechada-cobertura-vidro-jacuzzi.webp" alt="Varanda fechada com cobertura e jacuzzi" width="800" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Varanda • Residencial</span>
-                        <h4>Varanda com Cobertura e Jacuzzi</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 10mm • Fechamento lateral + cobertura • Calha integrada</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item landscape reveal"
-                data-img="assets/img/services/webp/sacada(sobre).webp"
-                data-tag="Sacada • Residencial"
-                data-title="Sacada Envidraçada com Vista Panorâmica"
-                data-desc="Fechamento de sacada em prédio residencial com vidros de alta transparência para preservar a vista panorâmica. O sistema discreto de trilhos integra-se perfeitamente à arquitetura do edifício."
-                data-details="Vidro temperado 8mm • Sistema de trilho discreto • Compatível com arquitetura existente">
-                <img src="assets/img/services/webp/sacada(sobre).webp" alt="Sacada envidraçada com vista panorâmica" width="800" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Sacada • Residencial</span>
-                        <h4>Sacada Envidraçada com Vista Panorâmica</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 8mm • Trilho discreto • Compatível com arquitetura existente</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- ──────────────── ESPELHOS ──────────────── -->
-    <section class="port-section port-section--alt" id="espelho">
-        <div class="container">
-            <div class="port-section-header reveal">
-                <div class="port-section-label">
-                    <span class="port-section-icon"><i class="fa-solid fa-table-columns"></i></span>
-                    <div>
-                        <div class="section-tag">Categoria</div>
-                        <h2>Espelhos Decorativos</h2>
-                    </div>
-                </div>
-                <p>Espelhos bisotados, jateados e com iluminação integrada para composições únicas. Cada espelho é cortado e instalado sob medida para o seu espaço.</p>
-            </div>
-        </div>
-        <div class="gallery" data-category="espelho">
-            <article class="gallery-item landscape reveal"
-                data-img="assets/img/services/webp/espelho-com-iluminacao-led-bancada-granito.webp"
-                data-tag="Espelho • Residencial"
-                data-title="Espelho com LED Embutido"
-                data-desc="Espelho de alto padrão com iluminação LED embutida nas bordas, criando um efeito de luz suave e uniforme ideal para maquiagem e ambientes de luxo. O acabamento com moldura invisível integra o espelho perfeitamente à parede."
-                data-details="Espelho bisotê de 8mm • LED frio 6500K • Moldura invisível embutida">
-                <img src="assets/img/services/webp/espelho-com-iluminacao-led-bancada-granito.webp" alt="Espelho com iluminação LED e bancada de granito" width="800" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Espelho • Residencial</span>
-                        <h4>Espelho com LED Embutido</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Espelho bisotê de 8mm • LED frio 6500K • Moldura invisível embutida</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/espelho.webp"
-                data-tag="Espelho • Residencial"
-                data-title="Espelho Decorativo Sob Medida"
-                data-desc="Espelho decorativo instalado sob medida, com corte preciso e fixação segura. Ideal para salas de estar, quartos e ambientes que valorizam a amplitude visual e a estética contemporânea."
-                data-details="Espelho de 6mm • Corte sob medida • Fixação com cola estrutural • Acabamento bisotado">
-                <img src="assets/img/services/webp/espelho.webp" alt="Espelho decorativo sob medida" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Espelho • Residencial</span>
-                        <h4>Espelho Decorativo Sob Medida</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Espelho de 6mm • Corte sob medida • Fixação com cola estrutural</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- ──────────────── PORTAS ──────────────── -->
-    <section class="port-section" id="porta">
-        <div class="container">
-            <div class="port-section-header reveal">
-                <div class="port-section-label">
-                    <span class="port-section-icon"><i class="fa-solid fa-door-open"></i></span>
-                    <div>
-                        <div class="section-tag">Categoria</div>
-                        <h2>Portas e Janelas</h2>
-                    </div>
-                </div>
-                <p>Portas pivotantes, de correr e janelas de vidro com perfis em alumínio ou aço inox. Design que valoriza a arquitetura e a luminosidade do ambiente.</p>
-            </div>
-        </div>
-        <div class="gallery" data-category="porta">
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/Porta(sobre).webp"
-                data-tag="Porta • Residencial"
-                data-title="Porta de Vidro — Perfil Alumínio"
-                data-desc="Porta de vidro temperado com perfil em alumínio para acesso entre ambientes internos ou integração com área externa. O vidro de alta transparência mantém a sensação de continuidade visual entre os ambientes."
-                data-details="Vidro temperado 10mm • Perfil alumínio • Dobradiça de aço inox • Puxador integrado">
-                <img src="assets/img/services/webp/Porta(sobre).webp" alt="Porta de vidro com perfil alumínio" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Porta • Residencial</span>
-                        <h4>Porta de Vidro — Perfil Alumínio</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado 10mm • Perfil alumínio • Dobradiça inox</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-            <article class="gallery-item portrait reveal"
-                data-img="assets/img/services/webp/porta_escura.webp"
-                data-tag="Porta • Residencial"
-                data-title="Porta Pivotante — Vidro Escurecido"
-                data-desc="Porta pivotante com vidro temperado fumê escurecido, combinando privacidade e sofisticação. O sistema pivotante permite abertura ampla e suave, adequada para entradas de destaque em residências e escritórios."
-                data-details="Vidro temperado fumê 10mm • Sistema pivotante • Perfil inox escovado • Fechadura magnética">
-                <img src="assets/img/services/webp/porta_escura.webp" alt="Porta pivotante com vidro escurecido" width="400" height="600" loading="lazy" decoding="async">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-base">
-                        <span class="gallery-tag">Porta • Residencial</span>
-                        <h4>Porta Pivotante — Vidro Escurecido</h4>
-                    </div>
-                    <div class="gallery-hover-panel">
-                        <p>Vidro temperado fumê 10mm • Sistema pivotante • Perfil inox escovado</p>
-                        <span class="gallery-hover-btn">Ver projeto <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
+    </div>
 
     <!-- CTA FINAL -->
     <section class="port-cta">
@@ -640,7 +160,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="footer-col">
                 <h4>Navegação</h4>
                 <ul>
@@ -651,7 +170,6 @@
                     <li><a href="index.html#contato">Contato</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
                 <h4>Contato</h4>
                 <ul class="footer-contact-list">
@@ -670,9 +188,7 @@
                 </ul>
             </div>
         </div>
-
         <div class="footer-divider"></div>
-
         <div class="container footer-bottom">
             <p>© 2026 Suprema Glass. Todos os direitos reservados.</p>
             <p>Desenvolvido por <a href="https://hrdev.com.br/" target="_blank" rel="noopener noreferrer">HR | DEV</a></p>
@@ -717,5 +233,4 @@
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/portfolio.js" defer></script>
 </body>
-
 </html>

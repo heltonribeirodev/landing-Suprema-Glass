@@ -3,7 +3,7 @@
    Complementa assets/style/style.css
 ───────────────────────────────────────── */
 
-/* ── Active nav link ── */
+── Active nav link ──
 .nav-link--active {
     color: var(--steel) !important;
 }
@@ -151,53 +151,15 @@
     margin-top: 12px;
 }
 
-
 /* ─────────────────────────────────────────
    NAV OVERRIDE — portfolio page has 5 links
 ───────────────────────────────────────── */
-.portfolio-page #nav {
-    padding: 0 32px;
-}
+/* nav igual ao index.html — sem override de padding ou gap */
 
-.portfolio-page .nav-links {
-    gap: 24px;
-    margin-right: 24px;
-}
-
-/* ── Gallery override: grid responsivo por coluna fixa ── */
+/* Ajuste de espaçamento da galeria na página de portfólio para se alinhar ao layout */
 .port-section .gallery,
 .port-section--alt .gallery {
-    background: transparent;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    grid-template-rows: unset;
     padding-bottom: 80px;
-}
-
-/* Cada card tem altura garantida — evita cards nanicos com poucas fotos */
-.port-section .gallery .gallery-item {
-    min-height: 420px;
-}
-
-/* Imagens preenchem o card inteiro sem distorção */
-.port-section .gallery .gallery-item img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* Precisamos que o card seja o contexto posicional */
-.port-section .gallery .gallery-item {
-    position: relative;
-}
-
-/* Remove height fixa das imgs landscape/portrait herdada do style.css */
-.port-section .gallery .gallery-item.landscape img,
-.port-section .gallery .gallery-item.portrait img {
-    height: 100%;
-    object-position: center;
 }
 
 /* Título nunca some: quebra de linha livre */
@@ -313,6 +275,9 @@
 /* ─────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+}
+
 @media (max-width: 768px) {
     .port-hero {
         padding-top: calc(var(--nav-h) + 40px);

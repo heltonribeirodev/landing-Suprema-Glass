@@ -1,0 +1,22 @@
+{
+  "name": "Suprema Glass & Facilities",
+  "short_name": "Suprema Glass",
+  "description": "Instalação de box de banheiro, fechamento de varanda, coberturas em vidro e espelhos em Curitiba e região metropolitana.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0d0f14",
+  "theme_color": "#1a6bff",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/img/logo/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/logo/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

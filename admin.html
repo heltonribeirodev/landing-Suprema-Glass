@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Suprema Glass & Facilities</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.ico">
+    <link rel="stylesheet" href="assets/style/admin.css">
+</head>
+
+<body>
+
+<!-- ══ TELA DE LOGIN ══════════════════════════════════════════════════════════ -->
+<div id="loginScreen" class="login-screen">
+    <div class="login-card">
+        <div class="login-logo">
+            <img src="assets/img/logo/new-logo.png" alt="Suprema Glass" width="120">
+            <span>SUPREMA<em> GLASS</em></span>
+        </div>
+        <h2>Painel Administrativo</h2>
+        <p class="login-sub">Acesso restrito — apenas para a equipe Suprema</p>
+
+        <div class="login-form">
+            <div class="field-wrap">
+                <label for="senhaInput"><i class="fa-solid fa-lock"></i> Senha</label>
+                <div class="pass-wrap">
+                    <input type="password" id="senhaInput" placeholder="Digite sua senha" autocomplete="current-password">
+                    <button type="button" class="toggle-pass" id="togglePass" aria-label="Mostrar senha">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="loginErro" class="login-erro hidden"></div>
+            <button class="btn-primary btn-login" id="btnLogin">
+                <span>Entrar</span>
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+        </div>
+
+        <p class="login-footer">
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+        </p>
+    </div>
+</div>
+
+<!-- ══ PAINEL ADMIN ══════════════════════════════════════════════════════════ -->
+<div id="adminPanel" class="admin-panel hidden">
+
+    <!-- TOPBAR -->
+    <header class="admin-topbar">
+        <div class="topbar-left">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="topbar-brand">
+                <img src="assets/img/logo/new-logo.png" alt="Suprema Glass" width="80">
+                <div>
+                    <strong>SUPREMA GLASS</strong>
+                    <small>Painel Admin</small>
+                </div>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <a href="portfolio.html" target="_blank" class="topbar-link">
+                <i class="fa-solid fa-eye"></i> Ver portfólio
+            </a>
+            <button class="btn-save-top" id="btnSaveTop">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>Publicar</span>
+            </button>
+            <button class="btn-logout" id="btnLogout" title="Sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- LAYOUT -->
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar" id="adminSidebar">
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-label">Categorias</div>
+                <ul id="sidebarCats"></ul>
+
+                <div class="sidebar-section-label mt">Ações</div>
+                <ul>
+                    <li>
+                        <button class="sidebar-action" id="btnAddCat">
+                            <i class="fa-solid fa-folder-plus"></i> Nova Categoria
+                        </button>
+                    </li>
+                    <li>
+                        <button class="sidebar-action" id="btnSaveMain">
+                            <i class="fa-solid fa-floppy-disk"></i> Publicar Alterações
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-stats" id="sidebarStats"></div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="admin-main" id="adminMain">
+
+            <!-- BOAS VINDAS / DASHBOARD -->
+            <section class="admin-section" id="secDashboard">
+                <div class="dash-welcome">
+                    <h1>Bem-vindo ao seu painel <i class="fa-solid fa-sparkles"></i></h1>
+                    <p>Aqui você gerencia todos os projetos do seu portfólio. Selecione uma categoria no menu lateral ou adicione um novo projeto.</p>
+                </div>
+                <div class="dash-cards" id="dashCards"></div>
+            </section>
+
+            <!-- EDITOR DE CATEGORIA -->
+            <section class="admin-section hidden" id="secCategoria">
+                <div class="section-header">
+                    <div class="section-header-title">
+                        <button class="btn-back" id="btnBackDash"><i class="fa-solid fa-arrow-left"></i></button>
+                        <div>
+                            <div class="section-tag" id="catTagLabel">Categoria</div>
+                            <h2 id="catPageTitle">Box de Banheiro</h2>
+                        </div>
+                    </div>
+                    <button class="btn-add-project" id="btnAddProject">
+                        <i class="fa-solid fa-plus"></i> Adicionar Projeto
+                    </button>
+                </div>
+
+                <!-- INFO DA CATEGORIA -->
+                <div class="cat-edit-card">
+                    <h3><i class="fa-solid fa-pen"></i> Informações da Categoria</h3>
+                    <div class="cat-edit-fields">
+                        <div class="field-row">
+                            <div class="field-wrap">
+                                <label>Nome da Categoria</label>
+                                <input type="text" id="catLabel" placeholder="Ex: Box de Banheiro">
+                            </div>
+                            <div class="field-wrap field-small">
+                                <label>ID (sem espaços)</label>
+                                <input type="text" id="catId" placeholder="Ex: box" readonly>
+                                <small>Gerado automaticamente</small>
+                            </div>
+                        </div>
+                        <div class="field-wrap">
+                            <label>Ícone da Categoria</label>
+                            <div class="icon-picker-wrap">
+                                <div class="icon-picker-preview" id="iconPreview">
+                                    <i id="iconPreviewEl" class="fa-solid fa-star"></i>
+                                </div>
+                                <input type="text" id="catIcon" placeholder="Ex: fa-solid fa-shower" style="flex:1">
+                                <button type="button" class="btn-icon-grid-toggle" id="btnIconGrid" title="Escolher ícone">
+                                    <i class="fa-solid fa-grid-2"></i> Escolher
+                                </button>
+                            </div>
+                            <div class="icon-grid hidden" id="iconGrid">
+                                <div class="icon-grid-search-wrap">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input type="text" id="iconSearch" placeholder="Filtrar ícones...">
+                                </div>
+                                <div class="icon-grid-items" id="iconGridItems"></div>
+                            </div>
+                            <small>Digite a classe do Font Awesome ou use o seletor acima</small>
+                        </div>
+                        <div class="field-wrap">
+                            <label>Descrição da Categoria</label>
+                            <textarea id="catDesc" rows="3" placeholder="Descreva os produtos desta categoria..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETOS DA CATEGORIA -->
+                <div class="projects-header">
+                    <h3>Projetos <span class="proj-count" id="projCount">0</span></h3>
+                    <p class="projects-hint">Arraste para reordenar. Clique no lápis para editar.</p>
+                </div>
+                <div class="projects-grid" id="projectsGrid"></div>
+
+                <!-- DELETE CATEGORIA -->
+                <div class="cat-danger-zone">
+                    <button class="btn-delete-cat" id="btnDeleteCat">
+                        <i class="fa-solid fa-trash"></i> Excluir esta categoria inteira
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- TOAST DE NOTIFICAÇÃO -->
+    <div class="admin-toast" id="adminToast"></div>
+
+    <!-- STATUS DE SALVAMENTO -->
+    <div class="save-indicator hidden" id="saveIndicator">
+        <i class="fa-solid fa-circle-notch fa-spin"></i> Publicando...
+    </div>
+
+</div>
+
+<!-- ══ MODAL — EDITAR PROJETO ════════════════════════════════════════════════ -->
+<div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3 id="modalTitle">Novo Projeto</h3>
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="modal-body">
+            <!-- UPLOAD DE IMAGEM -->
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-preview" id="uploadPreview">
+                    <i class="fa-solid fa-image"></i>
+                    <p>Clique ou arraste uma foto aqui</p>
+                    <small>JPEG, PNG ou WebP • máx. 8MB</small>
+                </div>
+                <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" class="hidden">
+                <div class="upload-progress hidden" id="uploadProgress">
+                    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                    <span id="progressText">Enviando...</span>
+                </div>
+            </div>
+            <input type="hidden" id="projImg">
+
+            <!-- CAMPOS DO PROJETO -->
+            <div class="modal-fields">
+                <div class="field-wrap">
+                    <label>Título do Projeto <span class="required">*</span></label>
+                    <input type="text" id="projTitulo" placeholder="Ex: Box com Perfil Dourado">
+                </div>
+
+                <div class="field-row">
+                    <div class="field-wrap">
+                        <label>Tag / Tipo</label>
+                        <input type="text" id="projTag" placeholder="Ex: Box • Residencial">
+                    </div>
+                    <div class="field-wrap field-small">
+                        <label>Orientação</label>
+                        <select id="projOrientacao">
+                            <option value="portrait">Retrato (vertical)</option>
+                            <option value="landscape">Paisagem (horizontal)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>Descrição Completa</label>
+                    <textarea id="projDesc" rows="4" placeholder="Descreva o projeto em detalhes..."></textarea>
+                </div>
+
+                <div class="field-wrap">
+                    <label>Detalhes Técnicos</label>
+                    <input type="text" id="projDetalhes" placeholder="Ex: Vidro temperado 8mm • Perfil alumínio Gold">
+                    <small>Separe com • para criar marcadores</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn-cancel" id="btnCancelModal">Cancelar</button>
+            <button class="btn-primary" id="btnSaveProject">
+                <i class="fa-solid fa-check"></i> Salvar Projeto
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ══ MODAL — CONFIRMAR EXCLUSÃO ════════════════════════════════════════════ -->
+<div class="modal-overlay hidden" id="confirmOverlay">
+    <div class="modal-box modal-box--small">
+        <div class="modal-header">
+            <h3><i class="fa-solid fa-triangle-exclamation" style="color:var(--danger)"></i> Confirmar Exclusão</h3>
+        </div>
+        <div class="modal-body">
+            <p id="confirmMsg">Tem certeza que deseja excluir este item?</p>
+            <p class="confirm-warning">Esta ação não pode ser desfeita.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-cancel" id="btnCancelConfirm">Cancelar</button>
+            <button class="btn-danger" id="btnConfirmDelete">
+                <i class="fa-solid fa-trash"></i> Excluir
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
