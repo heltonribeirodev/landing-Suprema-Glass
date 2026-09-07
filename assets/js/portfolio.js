@@ -93,6 +93,7 @@
       gallery.appendChild(article);
     });
 
+<<<<<<< HEAD
     section.appendChild(gallery);
     content.appendChild(section);
   });
@@ -134,6 +135,12 @@
 
         window.scrollTo({ top: targetY, behavior: 'smooth' });
       });
+=======
+    // Força a rolagem para o pixel zero da página
+    window.scrollTo({
+      top: 300,
+      behavior: 'smooth'
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
     });
   });
 

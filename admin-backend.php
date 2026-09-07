@@ -15,6 +15,7 @@
  * CONFIGURAÇÃO — edite apenas esta seção:
  */
 
+<<<<<<< HEAD
 // ── ⚙️  CONFIGURAÇÕES — lidas do arquivo .env ────────────────────────────────
 $_env_file = __DIR__ . '/.env';
 if (file_exists($_env_file)) {
@@ -35,6 +36,15 @@ if (empty($_ENV['SENHA_HASH']) || empty($_ENV['TOKEN_SECRET'])) {
 
 define('SENHA_HASH',   $_ENV['SENHA_HASH']);
 define('TOKEN_SECRET', $_ENV['TOKEN_SECRET']);
+=======
+// ── ⚙️  CONFIGURAÇÕES ──────────────────────────────────────────────────────────
+// Para gerar um novo hash: use https://bcrypt-generator.com/ com custo 12
+// ou execute no terminal: php -r "echo password_hash('SuaSenha', PASSWORD_BCRYPT, ['cost'=>12]);"
+define('SENHA_HASH',    '$2y$12$cSM14dcodeuvnA2FSzBKZ.2C3Ihnh.PmenSaQe09OJrpiwy7HeApS');
+
+// String secreta aleatória — TROQUE antes de publicar (mínimo 32 chars)
+define('TOKEN_SECRET',  'SupremaGlass2026_!xK8#mPqZ@rWvNjLtYhCbEoDfAi');
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 
 // Caminhos — não altere a menos que mova os arquivos
 define('JSON_PATH',     __DIR__ . '/assets/data/portfolio.json');
@@ -51,6 +61,7 @@ header('X-Frame-Options: DENY');
 header('Cache-Control: no-store, no-cache, must-revalidate');
 header('Referrer-Policy: strict-origin-when-cross-origin');
 
+<<<<<<< HEAD
 // CORS — aceita mesmo domínio + localhost (XAMPP/dev)
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 $allowed_origins = ['http://localhost', 'http://127.0.0.1', 'https://supremaglassco.com.br'];
@@ -62,6 +73,13 @@ if ($origin && (in_array($origin, $allowed_origins) || strpos($origin, 'localhos
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, X-Admin-Token');
 header('Access-Control-Allow-Credentials: true');
+=======
+// CORS — aceita apenas do mesmo domínio
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if ($origin) header("Access-Control-Allow-Origin: $origin");
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, X-Admin-Token');
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(204); exit; }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST')    { json_error(405, 'Método não permitido'); }
 
@@ -161,6 +179,7 @@ function handle_upload(): void {
         json_error(400, "Tipo não permitido ($mime). Use JPEG, PNG ou WebP.");
     }
 
+<<<<<<< HEAD
     // Nome de arquivo seguro — sempre .webp
     $base  = pathinfo($file['name'], PATHINFO_FILENAME);
     $base  = transliterate($base);
@@ -218,6 +237,28 @@ function handle_upload(): void {
 
     if (!$ok) {
         json_error(500, 'Falha ao converter para WebP. Verifique permissões da pasta.');
+=======
+    // Define extensão pelo MIME real
+    $ext = match($mime) {
+        'image/webp' => 'webp',
+        'image/png'  => 'png',
+        default      => 'jpg',
+    };
+
+    // Nome de arquivo seguro
+    $base   = pathinfo($file['name'], PATHINFO_FILENAME);
+    $base   = transliterate($base);
+    $base   = preg_replace('/[^a-z0-9\-]/', '-', strtolower($base));
+    $base   = trim(preg_replace('/-+/', '-', $base), '-');
+    $base   = substr($base, 0, 60);
+    $nome   = $base . '-' . time() . '.' . $ext;
+
+    if (!is_dir(IMG_PATH)) mkdir(IMG_PATH, 0755, true);
+
+    $dest = IMG_PATH . $nome;
+    if (!move_uploaded_file($file['tmp_name'], $dest)) {
+        json_error(500, 'Falha ao mover arquivo. Verifique permissões de assets/img/services/webp/');
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
     }
 
     json_ok(['url' => IMG_URL_BASE . $nome, 'nome' => $nome]);
@@ -344,4 +385,8 @@ function json_error(int $code, string $msg): never {
     http_response_code($code);
     echo json_encode(['ok' => false, 'erro' => $msg], JSON_UNESCAPED_UNICODE);
     exit;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9

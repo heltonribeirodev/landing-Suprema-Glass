@@ -1,10 +1,32 @@
 /**
  * admin.js — Suprema Glass & Facilities
+<<<<<<< HEAD
  * Painel administrativo — salva diretamente no servidor via admin-backend.php
+=======
+ * Painel administrativo com modo LOCAL (sem PHP) e modo PRODUÇÃO (PHP).
+ *
+ * Modo LOCAL  → detectado automaticamente em localhost / 127.0.0.1 / file://
+ *               Login: senha "Suprema@2026" validada no browser
+ *               Upload: imagem vira base64 (data:image/...) e preview funciona
+ *               Publicar: baixa portfolio.json para você enviar ao servidor
+ *
+ * Modo PROD   → qualquer outro domínio
+ *               Tudo passa pelo admin-backend.php normalmente
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
  */
 
 'use strict';
 
+<<<<<<< HEAD
+=======
+// ── AMBIENTE ──────────────────────────────────────────────────────────────────
+const IS_LOCAL = ['localhost', '127.0.0.1', ''].includes(location.hostname)
+              || location.protocol === 'file:';
+
+// Senha local (só usada em dev — em produção a validação é no PHP)
+const LOCAL_SENHA = 'Suprema@2026';
+
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 // ── ESTADO GLOBAL ─────────────────────────────────────────────────────────────
 const State = {
     token:         null,
@@ -45,12 +67,15 @@ const Dom = {
     catLabel:         $('catLabel'),
     catId:            $('catId'),
     catDesc:          $('catDesc'),
+<<<<<<< HEAD
     catIcon:          $('catIcon'),
     iconPreviewEl:    $('iconPreviewEl'),
     btnIconGrid:      $('btnIconGrid'),
     iconGrid:         $('iconGrid'),
     iconGridItems:    $('iconGridItems'),
     iconSearch:       $('iconSearch'),
+=======
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
     projCount:        $('projCount'),
     projectsGrid:     $('projectsGrid'),
     btnBackDash:      $('btnBackDash'),
@@ -86,15 +111,40 @@ const Dom = {
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
+=======
+    // Mostra badge de modo local
+    if (IS_LOCAL) injectLocalBadge();
+
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
     const savedToken = sessionStorage.getItem('sg_admin_token');
     if (savedToken) {
         State.token = savedToken;
         showPanel();
         loadData();
     }
+<<<<<<< HEAD
     bindEvents();
 });
 
+=======
+
+    bindEvents();
+});
+
+function injectLocalBadge() {
+    const badge = document.createElement('div');
+    badge.style.cssText = `
+        position:fixed;bottom:16px;left:16px;z-index:9999;
+        background:#d97706;color:#fff;font-size:11px;font-weight:700;
+        padding:5px 10px;border-radius:6px;letter-spacing:.5px;
+        font-family:'Inter',sans-serif;pointer-events:none;
+    `;
+    badge.textContent = '⚙ MODO LOCAL';
+    document.body.appendChild(badge);
+}
+
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 // ── EVENTS ────────────────────────────────────────────────────────────────────
 function bindEvents() {
     Dom.btnLogin.addEventListener('click', handleLogin);
@@ -129,6 +179,7 @@ function bindEvents() {
         markUnsaved();
     });
 
+<<<<<<< HEAD
     Dom.catIcon.addEventListener('input', () => {
         if (State.catIndex === null) return;
         const val = Dom.catIcon.value.trim();
@@ -147,6 +198,8 @@ function bindEvents() {
 
     Dom.iconSearch.addEventListener('input', renderIconGrid);
 
+=======
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
     Dom.btnAddProject.addEventListener('click', openModalNewProject);
     Dom.modalClose.addEventListener('click', closeModal);
     Dom.btnCancelModal.addEventListener('click', closeModal);
@@ -173,12 +226,17 @@ function bindEvents() {
 
     Dom.btnCancelConfirm.addEventListener('click', closeConfirm);
     Dom.btnConfirmDelete.addEventListener('click', executeDelete);
+<<<<<<< HEAD
     // Fecha modal apenas ao clicar DIRETAMENTE no overlay (fundo escuro), nunca ao clicar dentro do modal-box
     Dom.modalOverlay.addEventListener('mousedown', e => { if (e.target === Dom.modalOverlay) closeModal(); });
     Dom.confirmOverlay.addEventListener('mousedown', e => { if (e.target === Dom.confirmOverlay) closeConfirm(); });
     // Impede que cliques dentro do modal-box propaguem ao overlay
     Dom.modalOverlay.querySelector('.modal-box').addEventListener('mousedown', e => e.stopPropagation());
     Dom.confirmOverlay.querySelector('.modal-box').addEventListener('mousedown', e => e.stopPropagation());
+=======
+    Dom.modalOverlay.addEventListener('click', e => { if (e.target === Dom.modalOverlay) closeModal(); });
+    Dom.confirmOverlay.addEventListener('click', e => { if (e.target === Dom.confirmOverlay) closeConfirm(); });
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 
     window.addEventListener('beforeunload', e => {
         if (State.unsaved) { e.preventDefault(); e.returnValue = ''; }
@@ -194,9 +252,25 @@ async function handleLogin() {
     Dom.btnLogin.querySelector('span').textContent = 'Entrando...';
 
     try {
+<<<<<<< HEAD
         const res = await api('login', { senha }, false);
         State.token = res.token;
         sessionStorage.setItem('sg_admin_token', res.token);
+=======
+        if (IS_LOCAL) {
+            // Modo local: valida direto no browser
+            await delay(400); // simula latência
+            if (senha !== LOCAL_SENHA) throw new Error('Senha incorreta. Tente novamente.');
+            State.token = 'local-token-' + Date.now();
+            sessionStorage.setItem('sg_admin_token', State.token);
+        } else {
+            // Modo produção: valida no PHP
+            const res = await api('login', { senha }, false);
+            State.token = res.token;
+            sessionStorage.setItem('sg_admin_token', res.token);
+        }
+
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
         hideLoginError();
         showPanel();
         await loadData();
@@ -232,13 +306,19 @@ function hideLoginError() { Dom.loginErro.classList.add('hidden'); }
 async function loadData() {
     try {
         const res = await fetch('assets/data/portfolio.json?t=' + Date.now());
+<<<<<<< HEAD
         if (!res.ok) throw new Error(`Erro HTTP: ${res.status}`);
+=======
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
         State.data = await res.json();
         renderSidebar();
         renderDashboard();
         showDashboard();
     } catch (err) {
+<<<<<<< HEAD
         console.error('Falha ao carregar:', err);
+=======
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
         showToast('Erro ao carregar dados do portfólio.', 'error');
     }
 }
@@ -302,9 +382,12 @@ window.goToCategory = function(idx) {
     Dom.catLabel.value           = cat.label;
     Dom.catId.value              = cat.id;
     Dom.catDesc.value            = cat.descricao || '';
+<<<<<<< HEAD
     Dom.catIcon.value            = cat.icon || '';
     Dom.iconPreviewEl.className  = cat.icon || 'fa-solid fa-star';
     Dom.iconGrid.classList.add('hidden');
+=======
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 
     renderProjects();
     renderSidebar();
@@ -346,6 +429,7 @@ function renderProjects() {
     `).join('');
 }
 
+<<<<<<< HEAD
 // ── ICON PICKER ───────────────────────────────────────────────────────────────
 const ICON_LIST = [
     ['fa-solid fa-shower',         'Box / Chuveiro'],
@@ -414,6 +498,8 @@ function selectIcon(cls) {
     markUnsaved();
 }
 
+=======
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 function addNewCategory() {
     const novaCat = {
         id:        'categoria-' + Date.now(),
@@ -522,9 +608,56 @@ async function handleFileUpload(file) {
     Dom.uploadPreview.classList.add('hidden');
     Dom.uploadProgress.classList.remove('hidden');
     Dom.progressFill.style.width = '0%';
+<<<<<<< HEAD
     Dom.progressText.textContent = 'Enviando imagem...';
 
     await remoteUpload(file);
+=======
+    Dom.progressText.textContent = IS_LOCAL ? 'Processando imagem...' : 'Enviando imagem...';
+
+    if (IS_LOCAL) {
+        // Modo local: converte para base64 para preview funcionar
+        await localUpload(file);
+    } else {
+        // Modo produção: envia ao servidor PHP
+        await remoteUpload(file);
+    }
+}
+
+async function localUpload(file) {
+    // Anima barra de progresso
+    let prog = 0;
+    const iv = setInterval(() => {
+        prog = Math.min(prog + 20, 90);
+        Dom.progressFill.style.width = prog + '%';
+    }, 80);
+
+    try {
+        const dataUrl = await fileToBase64(file);
+        clearInterval(iv);
+        Dom.progressFill.style.width = '100%';
+
+        // Gera nome de arquivo para quando for publicar no servidor
+        const ext  = file.type === 'image/webp' ? 'webp' : file.type === 'image/png' ? 'png' : 'jpg';
+        const nome = slugify(file.name.replace(/\.[^.]+$/, '')) + '-' + Date.now() + '.' + ext;
+
+        // Armazena base64 no estado (no servidor vira o path real)
+        // Marcamos com prefixo para diferenciar base64 de paths reais
+        Dom.projImg.value = dataUrl;
+
+        setTimeout(() => {
+            setUploadPreviewImage(dataUrl);
+            Dom.uploadProgress.classList.add('hidden');
+            Dom.uploadPreview.classList.remove('hidden');
+            showToast('Imagem carregada! ⚠ No modo local, o "Publicar" baixa o JSON — suba a imagem manualmente para o servidor.', 'info');
+        }, 300);
+    } catch (err) {
+        clearInterval(iv);
+        Dom.uploadProgress.classList.add('hidden');
+        Dom.uploadPreview.classList.remove('hidden');
+        showToast('Erro ao processar imagem.', 'error');
+    }
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 }
 
 async function remoteUpload(file) {
@@ -616,8 +749,17 @@ async function saveData() {
     Dom.btnSaveMain.disabled = true;
 
     try {
+<<<<<<< HEAD
         const res = await api('save', { data: State.data });
         showToast(`✓ Publicado! ${res.projetos} projetos no ar.`, 'success');
+=======
+        if (IS_LOCAL) {
+            await localSave();
+        } else {
+            const res = await api('save', { data: State.data });
+            showToast(`✓ Publicado! ${res.projetos} projetos no ar.`, 'success');
+        }
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
         State.unsaved = false;
         updateUnsavedIndicator();
     } catch (err) {
@@ -629,6 +771,39 @@ async function saveData() {
     }
 }
 
+<<<<<<< HEAD
+=======
+let fileHandle = null;
+
+async function localSave() {
+    showToast('⏳ Sincronizando com o servidor...', 'info');
+
+    try {
+        const json = JSON.stringify(State.data, null, 2);
+        
+        const resposta = await fetch('./salvar_portfolio.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: json
+        });
+
+        if (resposta.ok) {
+            showToast('✅ portfolio.json substituído automaticamente!', 'success');
+            return Promise.resolve();
+        } else {
+            throw new Error('Falha na resposta do servidor.');
+        }
+
+    } catch (error) {
+        console.error('Falha na gravação:', error);
+        showToast('❌ Erro: O arquivo PHP não foi encontrado ou falhou.', 'error');
+        return Promise.reject(error);
+    }
+}
+
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 // ── UI HELPERS ────────────────────────────────────────────────────────────────
 function toggleSidebar() {
     if (window.innerWidth < 768) {
@@ -658,19 +833,31 @@ function showToast(msg, type = 'info') {
     toastTimeout = setTimeout(() => Dom.adminToast.classList.remove('show'), 5000);
 }
 
+<<<<<<< HEAD
 // ── API ───────────────────────────────────────────────────────────────────────
+=======
+// ── API (PRODUÇÃO) ────────────────────────────────────────────────────────────
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 async function api(action, body = {}, withToken = true) {
     const headers = { 'Content-Type': 'application/json' };
     if (withToken && State.token) headers['X-Admin-Token'] = State.token;
 
+<<<<<<< HEAD
     const res = await fetch('admin-backend.php', {
+=======
+    const res  = await fetch('admin-backend.php', {
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
         method: 'POST', headers,
         body: JSON.stringify({ action, ...body }),
     });
 
     let json;
     try { json = await res.json(); }
+<<<<<<< HEAD
     catch { throw new Error('O servidor não retornou JSON válido. Verifique se o PHP está ativo no XAMPP.'); }
+=======
+    catch { throw new Error('O servidor não retornou JSON válido. Verifique se o PHP está ativo.'); }
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
 
     if (res.status === 401) {
         sessionStorage.removeItem('sg_admin_token');
@@ -718,4 +905,21 @@ function slugify(str) {
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '')
         .substring(0, 60);
+<<<<<<< HEAD
 }
+=======
+}
+
+function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload  = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error('Falha ao ler arquivo'));
+        reader.readAsDataURL(file);
+    });
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+>>>>>>> e8e24afefce05ccbae4575336ec19fcaf217f0c9
